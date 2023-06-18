@@ -3,8 +3,7 @@ import numpy
 with open('/home/swickape/projects/github/plathagrams/spsidebyside11.txt') as fd:
     lines = fd.read().splitlines()
 
-def analyze_poem(lines):
-  poem_text = lines
+def get_firstline(lines):
   if lines[0] and not lines[1] and lines[2]:
     title = lines[0]
     dedicatee = ''
@@ -15,11 +14,18 @@ def analyze_poem(lines):
     firstline = 3
   else:
     raise 'This does not fit the format'
+  return [title, dedicatee, firstline]
 
+def get_stanzas(lines):
   stanza_count = 0
   stanza_length = 0
   stanzas = []
   in_stanza = False
+  firstvals = get_firstline(lines)
+  title = firstvals[0]
+  dedicatee = firstvals[1]
+  firstline = firstvals[2]
+  poem_text = lines
   for thisline in poem_text[firstline:]:
     if thisline:
       if in_stanza:
@@ -62,7 +68,6 @@ def analyze_poem(lines):
   unique_lengths = numpy.unique(stanzas)
   #print(unique_lengths)
 
-
   if stanza_count == 1:
     print('The poem "' + title + '" consists of a single stanza"')
   else:
@@ -70,6 +75,21 @@ def analyze_poem(lines):
       print('The poem "' + title + '" consists of ' + str(stanza_count) + ' stanzas of length ' + str(stanzas[0]))
     else:
       print('The poem "' + title + '" consists of ' + str(stanza_count) + ' stanzas of irregular length.')
+
+
+def analyze_poem(lines):
+  if lines[0] and not lines[1] and lines[2]:
+    title = lines[0]
+    dedicatee = ''
+    firstline = 2
+  elif lines[0] and lines[1] and not lines[2] and lines[3]:
+    title = lines[0]
+    dedicatee = lines[1]
+    firstline = 3
+  else:
+    raise 'This does not fit the format'
+  firstline = get_firstline(lines)
+  get_stanzas(lines)
 
 values = range(40)
 for i in values:
@@ -81,4 +101,4 @@ for i in values:
   with open(poem_file) as fd:
       lines = fd.read().splitlines()
       analyze_poem(lines)
-  print('\n')
+  print()
