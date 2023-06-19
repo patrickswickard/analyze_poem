@@ -1,7 +1,18 @@
 import numpy
+import re
 
 with open('/home/swickape/projects/github/plathagrams/spsidebyside11.txt') as fd:
     lines = fd.read().splitlines()
+
+def get_letter_frequencies(lines):
+  for thisline in lines:
+    print(thisline)
+    letters_only = re.sub(r"\W",'',thisline).upper()
+    letters_sorted = ''.join(sorted(letters_only))
+    print(letters_only)
+    letter_count = len(letters_only)
+    print(letter_count)
+    print(letters_sorted)
 
 def get_firstline(lines):
   if lines[0] and not lines[1] and lines[2]:
@@ -78,18 +89,8 @@ def get_stanzas(lines):
 
 
 def analyze_poem(lines):
-  if lines[0] and not lines[1] and lines[2]:
-    title = lines[0]
-    dedicatee = ''
-    firstline = 2
-  elif lines[0] and lines[1] and not lines[2] and lines[3]:
-    title = lines[0]
-    dedicatee = lines[1]
-    firstline = 3
-  else:
-    raise 'This does not fit the format'
-  firstline = get_firstline(lines)
   get_stanzas(lines)
+  get_letter_frequencies(lines)
 
 values = range(40)
 for i in values:
