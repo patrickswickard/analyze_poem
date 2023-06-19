@@ -6,6 +6,7 @@ with open('dict.json') as fd:
     syllable_dict = json.loads(fd.read())
 
 def get_syllable_count(thisword):
+  thisword_original = thisword
   this_word_syllable = syllable_dict.get(thisword.lower())
   if not this_word_syllable:
     #print(thisword + ' not in dictionary!!!!!!!')
@@ -14,6 +15,7 @@ def get_syllable_count(thisword):
       thisword = re.sub(r"(s$)","",thisword.lower())
       this_word_syllable = syllable_dict.get(thisword.lower())
       if not this_word_syllable:
+        unknown_word_list.append(thisword_original)
         pass
         #print(thisword2 + ' not in dictionary without s!!!!!!!')
   if this_word_syllable:
@@ -21,8 +23,8 @@ def get_syllable_count(thisword):
   else:
     return None
     
-
 word_hash = {}
+unknown_word_list = []
 def get_word_frequencies(lines):
   for thisline in lines:
     words_only = re.sub(r"[^\w\s]",' ',thisline).upper()
@@ -128,3 +130,5 @@ for i in values:
       analyze_poem(lines)
   print()
   print(word_hash)
+  print()
+  print(unknown_word_list)
