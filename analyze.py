@@ -2,8 +2,6 @@ import numpy
 import re
 import json
 
-with open('/home/swickape/projects/github/plathagrams/spsidebyside11.txt') as fd:
-    lines = fd.read().splitlines()
 with open('dict.json') as fd:
     syllable_dict = json.loads(fd.read())
 
