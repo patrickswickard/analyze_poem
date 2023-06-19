@@ -1,8 +1,34 @@
 import numpy
 import re
+import json
 
 with open('/home/swickape/projects/github/plathagrams/spsidebyside11.txt') as fd:
     lines = fd.read().splitlines()
+with open('dict.json') as fd:
+    syllable_dict = json.loads(fd.read())
+
+def get_syllable_count(word):
+  return syllable_dict.get(word.lower(),0)
+    
+
+def get_word_frequencies(lines):
+  for thisline in lines:
+    words_only = re.sub(r"[^\w\s]",'',thisline).upper()
+    print(words_only)
+    print('--------------')
+    word_list = words_only.split()
+    print(word_list)
+    syllable_list = list(map(lambda x: syllable_dict.get(x.lower()), word_list))
+    print('---------')
+    print('hooboy')
+    print('you jerks')
+    print(syllable_list)
+    print('you guys are rolling bums')
+    if (None in syllable_list):
+      print('non-dictionary word found:' + thisline)
+      print(syllable_list)
+    else:
+      print(str(sum(syllable_list)) + ' syllables in line for recommended pronunciation')
 
 def get_letter_frequencies(lines):
   for thisline in lines:
@@ -91,6 +117,7 @@ def get_stanzas(lines):
 def analyze_poem(lines):
   get_stanzas(lines)
   get_letter_frequencies(lines)
+  get_word_frequencies(lines)
 
 values = range(40)
 for i in values:
