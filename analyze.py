@@ -7,43 +7,34 @@ with open('/home/swickape/projects/github/plathagrams/spsidebyside11.txt') as fd
 with open('dict.json') as fd:
     syllable_dict = json.loads(fd.read())
 
-def get_syllable_count(word):
-  return syllable_dict.get(word.lower(),0)
+def get_syllable_count(thisword):
+  this_word_syllable = syllable_dict.get(thisword.lower())
+  if not this_word_syllable:
+    #print(thisword + ' not in dictionary!!!!!!!')
+    # try dropping the s if ends with s
+    if re.findall(r"[^s]s$",thisword.lower()):
+      thisword = re.sub(r"(s$)","",thisword.lower())
+      this_word_syllable = syllable_dict.get(thisword.lower())
+      if not this_word_syllable:
+        pass
+        #print(thisword2 + ' not in dictionary without s!!!!!!!')
+  if this_word_syllable:
+    return this_word_syllable
+  else:
+    return None
     
 
 word_hash = {}
 def get_word_frequencies(lines):
   for thisline in lines:
     words_only = re.sub(r"[^\w\s]",' ',thisline).upper()
-    #print(words_only)
-    #print('--------------')
     word_list = words_only.split()
-    #print(word_list)
     for thisword in word_list:
-      this_word_syllable = syllable_dict.get(thisword.lower())
-      if not this_word_syllable:
-        #print(thisword + ' not in dictionary!!!!!!!')
-        # try dropping the s if ends with s
-        if re.findall(r"[^s]s$",thisword.lower()):
-          thisword2 = thisword
-          thisword2 = re.sub(r"(s$)","",thisword2.lower())
-          #print(thisword)
-          #print(thisword2)
-          #print("try without s " + thisword2)
-          this_word_syllable2 = syllable_dict.get(thisword2.lower())
-          if not this_word_syllable2:
-            pass
-            #print(thisword2 + ' not in dictionary without s!!!!!!!')
       if word_hash.get(thisword):
         word_hash[thisword] = word_hash[thisword] + 1
       else:
         word_hash[thisword] = 1
-    syllable_list = list(map(lambda x: syllable_dict.get(x.lower()), word_list))
-    #print('---------')
-    #print('hooboy')
-    #print('you jerks')
-    #print(syllable_list)
-    #print('you guys are rolling bums')
+    syllable_list = list(map(lambda x: get_syllable_count(x), word_list))
     if (None in syllable_list):
       print('Word with unknown syllable count found in list.')
       print(thisline)
@@ -89,44 +80,29 @@ def get_stanzas(lines):
   for thisline in poem_text[firstline:]:
     if thisline:
       if in_stanza:
-        #print(thisline)
         in_stanza = True
         stanza_length += 1
       else:
-        #print('START!!!')
-        #print(thisline)
         in_stanza = True
         stanza_length += 1
     else:
       if in_stanza:
-        #print('END')
-        #print("BLANK!")
         in_stanza = False
-        #print(stanza_length)
         stanzas.append(stanza_length)
         stanza_length = 0
       else:
-        #print('MOREBLANK')
         in_stanza = False
   # one more stanza check at end
   if in_stanza:
-    #print('END')
-    #print(stanza_length)
     stanzas.append(stanza_length)
-    #print('ENDOFPOEM')
   else:
     pass
-    #print('END')
-    #print('ENDEDONBLANKLINEIGUESS')
   stanza_count = len(stanzas)
   nonempty_lines = []
   for thisline in lines:
     if thisline:
       nonempty_lines.append(thisline)
-  #print(stanzas)
-  #print(stanza_count)
   unique_lengths = numpy.unique(stanzas)
-  #print(unique_lengths)
 
   if stanza_count == 1:
     print('The poem "' + title + '" consists of a single stanza"')
@@ -153,4 +129,4 @@ for i in values:
       lines = fd.read().splitlines()
       analyze_poem(lines)
   print()
- # print(word_hash)
+  print(word_hash)
