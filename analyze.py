@@ -42,13 +42,16 @@ def get_word_frequencies(lines):
     #print('---------')
     #print('hooboy')
     #print('you jerks')
-    print(syllable_list)
+    #print(syllable_list)
     #print('you guys are rolling bums')
     if (None in syllable_list):
-      print('non-dictionary word found:' + thisline)
+      print('Word with unknown syllable count found in list.')
+      print(thisline)
       print(syllable_list)
     else:
       print(str(sum(syllable_list)) + ' syllables in line for recommended pronunciation')
+      print(thisline)
+      print(syllable_list)
 
 def get_letter_frequencies(lines):
   for thisline in lines:
