@@ -15,35 +15,35 @@ word_hash = {}
 def get_word_frequencies(lines):
   for thisline in lines:
     words_only = re.sub(r"[^\w\s]",' ',thisline).upper()
-    print(words_only)
-    print('--------------')
+    #print(words_only)
+    #print('--------------')
     word_list = words_only.split()
-    print(word_list)
+    #print(word_list)
     for thisword in word_list:
       this_word_syllable = syllable_dict.get(thisword.lower())
       if not this_word_syllable:
-        print(thisword + ' not in dictionary!!!!!!!')
+        #print(thisword + ' not in dictionary!!!!!!!')
         # try dropping the s if ends with s
         if re.findall(r"[^s]s$",thisword.lower()):
           thisword2 = thisword
           thisword2 = re.sub(r"(s$)","",thisword2.lower())
-          print(thisword)
-          print(thisword2)
-          print("try without s " + thisword)
-          print("try without s " + thisword2)
+          #print(thisword)
+          #print(thisword2)
+          #print("try without s " + thisword2)
           this_word_syllable2 = syllable_dict.get(thisword2.lower())
           if not this_word_syllable2:
-            print(thisword2 + ' not in dictionary without s!!!!!!!')
+            pass
+            #print(thisword2 + ' not in dictionary without s!!!!!!!')
       if word_hash.get(thisword):
         word_hash[thisword] = word_hash[thisword] + 1
       else:
         word_hash[thisword] = 1
     syllable_list = list(map(lambda x: syllable_dict.get(x.lower()), word_list))
-    print('---------')
-    print('hooboy')
-    print('you jerks')
+    #print('---------')
+    #print('hooboy')
+    #print('you jerks')
     print(syllable_list)
-    print('you guys are rolling bums')
+    #print('you guys are rolling bums')
     if (None in syllable_list):
       print('non-dictionary word found:' + thisline)
       print(syllable_list)
