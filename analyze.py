@@ -128,7 +128,7 @@ for i in values:
   with open(poem_file) as fd:
       lines = fd.read().splitlines()
       analyze_poem(lines)
-  print()
-  print(word_hash)
-  print()
-  print(unknown_word_list)
+print()
+print(word_hash)
+print()
+print(unknown_word_list)
