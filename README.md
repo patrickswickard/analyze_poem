@@ -4,4 +4,4 @@ Note two issues with dictionary:
 1.  Many words are missing that are not terribly uncommon
 2.  Many words have alternate pronunciations, e.g. "our" can be one or two syllables.  Code only takes the preferred (first) version
 
-I frankensteined together two flawed dictionaries to make one larger flawed dictionary and added code to catch simple +s plurals.  This also affects haikus project.
+I frankensteined together two flawed dictionaries to make one larger flawed dictionary and added code to catch simple +s plurals.  This also affects haikus project.  More information can be found in the haiku project for constructing this dictionary and adding words.
