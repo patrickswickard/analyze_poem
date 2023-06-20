@@ -17,7 +17,6 @@ def get_syllable_count(thisword):
       if not this_word_syllable:
         unknown_word_list.append(thisword_original)
         pass
-        #print(thisword2 + ' not in dictionary without s!!!!!!!')
   if this_word_syllable:
     return this_word_syllable
   else:
@@ -129,6 +128,7 @@ for i in values:
       lines = fd.read().splitlines()
       analyze_poem(lines)
 print()
-print(word_hash)
+sorted_word_hash = sorted(word_hash.items(), key=lambda x:x[1],reverse=True)
+print(sorted_word_hash)
 print()
 print(unknown_word_list)
