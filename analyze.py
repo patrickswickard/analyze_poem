@@ -122,20 +122,20 @@ def get_stanzas(lines):
 
 
 def analyze_poem(lines):
-  get_stanzas(lines)
-  get_letter_frequencies(lines)
+#  get_stanzas(lines)
+#  get_letter_frequencies(lines)
   get_word_frequencies(lines)
 
 values = range(40)
 for i in values:
-##  poem_file = '/home/swickape/projects/github/plathagrams/spsidebyside' + str(i+1) + '.txt'
-##  with open(poem_file) as fd:
-##      lines = fd.read().splitlines()
-##      analyze_poem(lines)
-  poem_file = '/home/swickape/projects/github/plathagrams/anagram_' + str(i+1) + '.txt'
+  poem_file = '/home/swickape/projects/github/plathagrams/spsidebyside' + str(i+1) + '.txt'
   with open(poem_file) as fd:
       lines = fd.read().splitlines()
       analyze_poem(lines)
+##  poem_file = '/home/swickape/projects/github/plathagrams/anagram_' + str(i+1) + '.txt'
+##  with open(poem_file) as fd:
+##      lines = fd.read().splitlines()
+##      analyze_poem(lines)
 #print()
 sorted_word_hash = sorted(word_hash.items(), key=lambda x:x[1],reverse=True)
 #print(sorted_word_hash)
