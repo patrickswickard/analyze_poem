@@ -132,11 +132,11 @@ for i in values:
   with open(poem_file) as fd:
       lines = fd.read().splitlines()
       analyze_poem(lines)
-##  poem_file = '/home/swickape/projects/github/plathagrams/anagram_' + str(i+1) + '.txt'
-##  with open(poem_file) as fd:
-##      lines = fd.read().splitlines()
-##      analyze_poem(lines)
-#print()
+  poem_file = '/home/swickape/projects/github/plathagrams/anagram_' + str(i+1) + '.txt'
+  with open(poem_file) as fd:
+      lines = fd.read().splitlines()
+      analyze_poem(lines)
+print()
 sorted_word_hash = sorted(word_hash.items(), key=lambda x:x[1],reverse=True)
 #print(sorted_word_hash)
 #print()
