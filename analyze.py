@@ -6,7 +6,8 @@ import poemstruct
 with open('dict.json') as fd:
     syllable_dict = json.loads(fd.read())
 
-def get_syllable_data(lines):
+def get_syllable_data(thispoem):
+  lines = thispoem.lines
   total_syllables = 0
   nonempty_line_count = 0
   title = lines[0]
@@ -142,11 +143,11 @@ def get_stanzas(lines):
       print('MYCOUNTS,' + str(line_count) + ',' + str(stanza_count) + ',' + '-')
 
 
-def analyze_poem(lines):
+def analyze_poem(thispoem):
 #  get_stanzas(lines)
 #  get_letter_frequencies(lines)
 #  get_word_frequencies(lines)
-  get_syllable_data(lines)
+  get_syllable_data(thispoem)
 
 def read_poem(poem_file):
   with open(poem_file) as fd:
@@ -170,11 +171,11 @@ values = range(40)
 for i in values:
   poem_file = '/home/swickape/projects/github/plathagrams/spsidebyside' + str(i+1) + '.txt'
   this_poem = read_poem(poem_file)
-  analyze_poem(this_poem.lines)
+  analyze_poem(this_poem)
 for i in values:
   poem_file = '/home/swickape/projects/github/plathagrams/anagram_' + str(i+1) + '.txt'
   this_poem = read_poem(poem_file)
-  analyze_poem(this_poem.lines)
+  analyze_poem(this_poem)
 
 print()
 sorted_word_hash = sorted(word_hash.items(), key=lambda x:x[1],reverse=True)
