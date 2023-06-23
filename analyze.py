@@ -5,11 +5,35 @@ import json
 with open('dict.json') as fd:
     syllable_dict = json.loads(fd.read())
 
+def get_syllable_data(lines):
+  total_syllables = 0
+  nonempty_line_count = 0
+  title = lines[0]
+  for thisline in lines:
+    if thisline:
+      nonempty_line_count += 1
+      words_only = re.sub(r"[^\w\s]",' ',thisline).upper()
+      word_list = words_only.split()
+      for thisword in word_list:
+        if word_hash.get(thisword):
+          word_hash[thisword] = word_hash[thisword] + 1
+        else:
+          word_hash[thisword] = 1
+      syllable_list = list(map(lambda x: get_syllable_count(x), word_list))
+      if (None in syllable_list):
+        raise('Word with unknown syllable count found in list.')
+      else:
+        number_of_syllables = sum(syllable_list)
+        total_syllables += number_of_syllables
+    else:
+      pass
+  perline = round(total_syllables/nonempty_line_count,3)
+  print(title + ',' + str(total_syllables) + ',' + str(nonempty_line_count))
+
 def get_syllable_count(thisword):
   thisword_original = thisword
   this_word_syllable = syllable_dict.get(thisword.lower())
   if not this_word_syllable:
-    #print(thisword + ' not in dictionary!!!!!!!')
     # try dropping the s if ends with s
     if re.findall(r"[^s]s$",thisword.lower()):
       thisword = re.sub(r"(s$)","",thisword.lower())
@@ -108,13 +132,9 @@ def get_stanzas(lines):
   unique_lengths = numpy.unique(stanzas)
 
   if stanza_count == 1:
-#    print('The poem "' + title + '" consists of a single stanza of length ' + str(line_count))
-##    print('The poem "' + title + '" consists of a single stanza of length ' + str(line_count))
     print('MYCOUNTS,' + str(line_count) + ',' + '1' + ',' + str(line_count))
   else:
     if len(unique_lengths) == 1:
-#      print('The poem "' + title + '" consists of ' + str(stanza_count) + ' stanzas of length ' + str(stanzas[0])  + ': ' + str(line_count) + ' total.')
-##      print('The poem "' + title + '" consists of ' + str(stanza_count) + ' stanzas of length ' + str(stanzas[0])  + ': ' + str(line_count) + ' total.')
       print('MYCOUNTS,' + str(line_count) + ',' + str(stanza_count) + ',' + str(stanzas[0]))
     else:
 #      print('The poem "' + title + '" consists of ' + str(stanza_count) + ' stanzas of irregular length.'  + ': ' + str(line_count) + ' total.')
@@ -124,18 +144,20 @@ def get_stanzas(lines):
 def analyze_poem(lines):
 #  get_stanzas(lines)
 #  get_letter_frequencies(lines)
-  get_word_frequencies(lines)
+#  get_word_frequencies(lines)
+  get_syllable_data(lines)
 
 values = range(40)
 for i in values:
-  poem_file = '/home/swickape/projects/github/plathagrams/spsidebyside' + str(i+1) + '.txt'
-  with open(poem_file) as fd:
-      lines = fd.read().splitlines()
-      analyze_poem(lines)
+##  poem_file = '/home/swickape/projects/github/plathagrams/spsidebyside' + str(i+1) + '.txt'
+##  with open(poem_file) as fd:
+##      lines = fd.read().splitlines()
+##      analyze_poem(lines)
   poem_file = '/home/swickape/projects/github/plathagrams/anagram_' + str(i+1) + '.txt'
   with open(poem_file) as fd:
       lines = fd.read().splitlines()
       analyze_poem(lines)
+
 print()
 sorted_word_hash = sorted(word_hash.items(), key=lambda x:x[1],reverse=True)
 #print(sorted_word_hash)
