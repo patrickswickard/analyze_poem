@@ -29,6 +29,15 @@ class Poem:
       raise 'This does not fit the format'
     return [title, dedicatee, firstline]
 
+  def get_body(self):
+    lines = self.lines
+    firstvals = self.get_firstline()
+    title = firstvals[0]
+    dedicatee = firstvals[1]
+    firstline = firstvals[2]
+    poem_text = lines
+    return poem_text[firstline:]
+
   def get_stanzas(self):
     lines = self.lines
     stanza_count = 0
@@ -36,12 +45,8 @@ class Poem:
     line_count = 0
     stanzas = []
     in_stanza = False
-    firstvals = self.get_firstline()
-    title = firstvals[0]
-    dedicatee = firstvals[1]
-    firstline = firstvals[2]
-    poem_text = lines
-    for thisline in poem_text[firstline:]:
+    poem_body = self.get_body()
+    for thisline in poem_body:
       if thisline:
         if in_stanza:
           in_stanza = True
