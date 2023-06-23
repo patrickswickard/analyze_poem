@@ -50,7 +50,8 @@ def get_syllable_count(thisword):
     
 word_hash = {}
 unknown_word_list = []
-def get_word_frequencies(lines):
+def get_word_frequencies(thispoem):
+  lines = thispoem.lines
   total_syllables = 0
   for thisline in lines:
     words_only = re.sub(r"[^\w\s]",' ',thisline).upper()
@@ -70,7 +71,8 @@ def get_word_frequencies(lines):
       print(thisline)
       print(syllable_list)
 
-def get_letter_frequencies(lines):
+def get_letter_frequencies(thispoem):
+  lines = thispoem.lines
   for thisline in lines:
     print(thisline)
     letters_only = re.sub(r"\W",'',thisline).upper()
@@ -80,7 +82,8 @@ def get_letter_frequencies(lines):
     print(letter_count)
     print(letters_sorted)
 
-def get_firstline(lines):
+def get_firstline(thispoem):
+  lines = thispoem.lines
   if lines[0] and not lines[1] and lines[2]:
     title = lines[0]
     dedicatee = ''
@@ -93,13 +96,14 @@ def get_firstline(lines):
     raise 'This does not fit the format'
   return [title, dedicatee, firstline]
 
-def get_stanzas(lines):
+def get_stanzas(thispoem):
+  lines = thispoem.lines
   stanza_count = 0
   stanza_length = 0
   line_count = 0
   stanzas = []
   in_stanza = False
-  firstvals = get_firstline(lines)
+  firstvals = get_firstline(thispoem)
   title = firstvals[0]
   dedicatee = firstvals[1]
   firstline = firstvals[2]
@@ -144,9 +148,9 @@ def get_stanzas(lines):
 
 
 def analyze_poem(thispoem):
-#  get_stanzas(lines)
-#  get_letter_frequencies(lines)
-#  get_word_frequencies(lines)
+  get_stanzas(thispoem)
+  get_letter_frequencies(thispoem)
+  get_word_frequencies(thispoem)
   get_syllable_data(thispoem)
 
 def read_poem(poem_file):
