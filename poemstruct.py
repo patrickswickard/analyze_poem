@@ -41,12 +41,8 @@ class Poem:
 
   def get_body(self):
     lines = self.lines
-    #firstvals = self.get_firstline()
-    #title = firstvals[0]
     title = self.title
-    #dedicatee = firstvals[1]
     dedicatee = self.dedicatee
-    #firstline = firstvals[2]
     firstline = self.firstline
     poem_text = lines
     return poem_text[firstline:]
