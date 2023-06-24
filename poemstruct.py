@@ -12,12 +12,16 @@ class Book:
     self.poem_list = []
 
 class Poem:
-  def __init__(self,title,dedicatee,lines):
-    self.title = title
-    self.dedicatee = dedicatee
+  #def __init__(self,title,dedicatee,lines):
+  def __init__(self,lines):
+    #self.title = title
+    #self.dedicatee = dedicatee
     self.lines = lines
+    self.get_firstline()
     self.word_hash = {}
     self.unknown_word_list = []
+    self.body = self.get_body()
+    self.get_stanzas()
 
   def length(self):
     return len(self.lines)
@@ -25,25 +29,37 @@ class Poem:
   def get_firstline(self):
     lines = self.lines
     if lines[0] and not lines[1] and lines[2]:
-      title = lines[0]
-      dedicatee = ''
-      firstline = 2
+      self.title = lines[0]
+      self.dedicatee = ''
+      self.firstline = 2
     elif lines[0] and lines[1] and not lines[2] and lines[3]:
-      title = lines[0]
-      dedicatee = lines[1]
-      firstline = 3
+      self.title = lines[0]
+      self.dedicatee = lines[1]
+      self.firstline = 3
     else:
       raise 'This does not fit the format'
-    return [title, dedicatee, firstline]
 
   def get_body(self):
     lines = self.lines
-    firstvals = self.get_firstline()
-    title = firstvals[0]
-    dedicatee = firstvals[1]
-    firstline = firstvals[2]
+    #firstvals = self.get_firstline()
+    #title = firstvals[0]
+    title = self.title
+    #dedicatee = firstvals[1]
+    dedicatee = self.dedicatee
+    #firstline = firstvals[2]
+    firstline = self.firstline
     poem_text = lines
     return poem_text[firstline:]
+
+  def print_stanza_info(self):
+    if self.stanza_count == 1:
+      print('MYCOUNTS,' + str(self.line_count) + ',' + '1' + ',' + str(self.line_count))
+    else:
+      if len(self.stanza_unique_lengths) == 1:
+        print('MYCOUNTS,' + str(self.line_count) + ',' + str(self.stanza_count) + ',' + str(self.stanzas[0]))
+      else:
+        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of irregular length.'  + ': ' + str(self.line_count) + ' total.')
+        print('MYCOUNTS,' + str(self.line_count) + ',' + str(self.stanza_count) + ',' + '-')
 
   def get_stanzas(self):
     lines = self.lines
@@ -52,7 +68,7 @@ class Poem:
     line_count = 0
     stanzas = []
     in_stanza = False
-    poem_body = self.get_body()
+    poem_body = self.body
     for thisline in poem_body:
       if thisline:
         if in_stanza:
@@ -76,20 +92,15 @@ class Poem:
     else:
       pass
     stanza_count = len(stanzas)
-    nonempty_lines = []
+    self.nonempty_lines = []
     for thisline in lines:
       if thisline:
-        nonempty_lines.append(thisline)
-    unique_lengths = numpy.unique(stanzas)
-
-    if stanza_count == 1:
-      print('MYCOUNTS,' + str(line_count) + ',' + '1' + ',' + str(line_count))
-    else:
-      if len(unique_lengths) == 1:
-        print('MYCOUNTS,' + str(line_count) + ',' + str(stanza_count) + ',' + str(stanzas[0]))
-      else:
-#        print('The poem "' + title + '" consists of ' + str(stanza_count) + ' stanzas of irregular length.'  + ': ' + str(line_count) + ' total.')
-        print('MYCOUNTS,' + str(line_count) + ',' + str(stanza_count) + ',' + '-')
+        self.nonempty_lines.append(thisline)
+    self.stanza_count = stanza_count
+    self.stanza_unique_lengths = numpy.unique(stanzas)
+    self.line_count = line_count
+    self.stanzas = stanzas
+    #self.print_stanza_info()
 
   def get_letter_frequencies(self):
     lines = self.lines
