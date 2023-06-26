@@ -56,6 +56,7 @@ class Poem:
       else:
         print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of irregular length.'  + ': ' + str(self.line_count) + ' total.')
         print('MYCOUNTS,' + str(self.line_count) + ',' + str(self.stanza_count) + ',' + '-')
+    print(self.stanzas)
 
   def get_stanzas(self):
     lines = self.lines
@@ -98,18 +99,24 @@ class Poem:
     self.stanzas = stanzas
     #self.print_stanza_info()
 
-  def get_letter_frequencies(self):
+  def print_letter_frequencies(self):
     lines = self.lines
     for thisline in lines:
       print(thisline)
-      letters_only = re.sub(r"\W",'',thisline).upper()
-      letters_sorted = ''.join(sorted(letters_only))
-      print(letters_only)
-      letter_count = len(letters_only)
-      print(letter_count)
-      print(letters_sorted)
+      print(self.get_string_letters(thisline))
+      print(self.get_string_sig(thisline))
+      print(len(self.get_string_letters(thisline)))
 
-  def get_syllable_count(self,thisword):
+  def get_string_sig(self,string):
+    letters_only = self.get_string_letters(string)
+    letters_only_sorted = ''.join(sorted(letters_only))
+    return letters_only_sorted
+
+  def get_string_letters(self,string):
+    letters_only = re.sub(r"\W",'',string).upper()
+    return letters_only
+
+  def get_string_syllable_count(self,thisword):
     thisword_original = thisword
     this_word_syllable = syllable_dict.get(thisword.lower())
     if not this_word_syllable:
@@ -125,18 +132,27 @@ class Poem:
       self.unknown_word_list.append(thisword_original)
       return None
 
+  def get_word_list(self,string):
+    words_only = re.sub(r"[^\w\s]",' ',string).upper()
+    word_list = words_only.split()
+    return word_list
+
   def get_word_frequencies(self):
     lines = self.lines
     total_syllables = 0
     for thisline in lines:
-      words_only = re.sub(r"[^\w\s]",' ',thisline).upper()
-      word_list = words_only.split()
+      word_list = self.get_word_list(thisline)
       for thisword in word_list:
         if self.word_hash.get(thisword):
           self.word_hash[thisword] = self.word_hash[thisword] + 1
         else:
           self.word_hash[thisword] = 1
-      syllable_list = list(map(lambda x: self.get_syllable_count(x), word_list))
+      syllable_list = []
+      for thisword in word_list:
+        this_syllable_count = self.get_string_syllable_count(thisword)
+        syllable_list.append(this_syllable_count)
+      #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
+      #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
       if (None in syllable_list):
         print('Word with unknown syllable count found in list.')
         print(thisline)
@@ -158,14 +174,13 @@ class Poem:
     for thisline in lines:
       if thisline:
         nonempty_line_count += 1
-        words_only = re.sub(r"[^\w\s]",' ',thisline).upper()
-        word_list = words_only.split()
+        word_list = self.get_word_list(thisline)
         for thisword in word_list:
           if self.word_hash.get(thisword):
             self.word_hash[thisword] = self.word_hash[thisword] + 1
           else:
             self.word_hash[thisword] = 1
-        syllable_list = list(map(lambda x: self.get_syllable_count(x), word_list))
+        syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
         if (None in syllable_list):
           raise('Word with unknown syllable count found in list.')
         else:

@@ -8,12 +8,10 @@ import poemstruct
 
 def analyze_poem(thispoem):
   print('I read a poem today!')
-  thispoem.print_stanza_info()
-  #thispoem.get_stanzas()
-  #get_letter_frequencies(thispoem)
+  #thispoem.print_stanza_info()
   #thispoem.get_letter_frequencies()
-  #get_word_frequencies(thispoem)
-  #thispoem.get_word_frequencies()
+  #thispoem.print_letter_frequencies()
+  thispoem.get_word_frequencies()
   #get_syllable_data(thispoem)
   #thispoem.get_syllable_data()
 
