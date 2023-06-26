@@ -22,6 +22,7 @@ class Poem:
     self.unknown_word_list = []
     self.body = self.get_body()
     self.get_stanzas()
+    self.poem_line_syllable_list = []
 
   def length(self):
     return len(self.lines)
@@ -156,16 +157,26 @@ class Poem:
       for thisword in word_list:
         this_syllable_count = self.get_string_syllable_count(thisword)
         line_syllable_list.append(this_syllable_count)
+      self.poem_line_syllable_list.append(line_syllable_list)
+      print(thisline)
+    self.print_syllable_list()
+
+  def print_syllable_list(self):
+    for this_line_syllable_list in self.poem_line_syllable_list:
       #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
       #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
-      if (None in line_syllable_list):
+      #if (None in line_syllable_list):
+      if (None in this_line_syllable_list):
         print('Word with unknown syllable count found in list.')
-        print(thisline)
-        print(line_syllable_list)
+        #print(thisline)
+#        #print(line_syllable_list)
+        print(this_line_syllable_list)
       else:
-        print(str(sum(line_syllable_list)) + ' syllables in line for recommended pronunciation')
-        print(thisline)
-        print(line_syllable_list)
+        #print(str(sum(line_syllable_list)) + ' syllables in line for recommended pronunciation')
+        print(str(sum(this_line_syllable_list)) + ' syllables in line for recommended pronunciation')
+#        #print(thisline)
+        #print(line_syllable_list)
+        print(this_line_syllable_list)
     #sorted_word_hash = sorted(self.word_hash.items(), key=lambda x:x[1],reverse=True)
     #print(sorted_word_hash)
     #sorted_unknown_word_list = sorted(self.unknown_word_list)
