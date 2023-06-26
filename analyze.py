@@ -12,6 +12,7 @@ def analyze_poem(thispoem):
   #thispoem.get_letter_frequencies()
   #thispoem.print_letter_frequencies()
   thispoem.get_word_frequencies()
+  thispoem.get_syllable_list()
   #get_syllable_data(thispoem)
   #thispoem.get_syllable_data()
 
