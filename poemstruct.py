@@ -46,31 +46,20 @@ class Poem:
       raise 'This does not fit the format'
 
   def get_body(self):
-    lines = []
-    for thisline in self.linelist:
-      lines.append(thisline.text)
-    title = self.title
-    dedicatee = self.dedicatee
     firstline = self.firstline
-    poem_text = self.linelist
-    return poem_text[firstline:]
+    return self.linelist[firstline:]
 
   def print_stanza_info(self):
     if self.stanza_count == 1:
-      print('MYCOUNTS,' + str(self.line_count) + ',' + '1' + ',' + str(self.line_count))
+      print('The poem "' + self.title + '" consists of ' + '1' + ' stanza of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.line_count) + ' total.')
     else:
       if len(self.stanza_unique_lengths) == 1:
-        print('MYCOUNTS,' + str(self.line_count) + ',' + str(self.stanza_count) + ',' + str(self.stanzas[0]))
+        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.line_count) + ' total.')
       else:
         print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of irregular length.'  + ': ' + str(self.line_count) + ' total.')
-        print('MYCOUNTS,' + str(self.line_count) + ',' + str(self.stanza_count) + ',' + '-')
     print(self.stanzas)
 
   def get_stanzas(self):
-    #lines = self.lines
-    lines = []
-    for thisline in self.linelist:
-      lines.append(thisline.text)
     stanza_count = 0
     stanza_length = 0
     line_count = 0
@@ -78,7 +67,7 @@ class Poem:
     in_stanza = False
     poem_body = self.body
     for thisline in poem_body:
-      if thisline:
+      if thisline.text:
         if in_stanza:
           in_stanza = True
           stanza_length += 1
@@ -101,14 +90,13 @@ class Poem:
       pass
     stanza_count = len(stanzas)
     self.nonempty_lines = []
-    for thisline in lines:
-      if thisline:
+    for thisline in self.linelist:
+      if thisline.text:
         self.nonempty_lines.append(thisline)
     self.stanza_count = stanza_count
     self.stanza_unique_lengths = numpy.unique(stanzas)
     self.line_count = line_count
     self.stanzas = stanzas
-    #self.print_stanza_info()
 
   def print_letter_frequencies(self):
     for thisline in self.linelist:
