@@ -49,16 +49,6 @@ class Poem:
     firstline = self.firstline
     return self.linelist[firstline:]
 
-  def print_stanza_info(self):
-    if self.stanza_count == 1:
-      print('The poem "' + self.title + '" consists of ' + '1' + ' stanza of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.line_count) + ' total.')
-    else:
-      if len(self.stanza_unique_lengths) == 1:
-        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.line_count) + ' total.')
-      else:
-        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of irregular length.'  + ': ' + str(self.line_count) + ' total.')
-    print(self.stanzas)
-
   def get_stanzas(self):
     stanza_count = 0
     stanza_length = 0
@@ -97,13 +87,6 @@ class Poem:
     self.stanza_unique_lengths = numpy.unique(stanzas)
     self.line_count = line_count
     self.stanzas = stanzas
-
-  def print_letter_frequencies(self):
-    for thisline in self.linelist:
-      print(thisline.text)
-      print(self.get_string_letters(thisline.text))
-      print(self.get_string_sig(thisline.text))
-      print(len(self.get_string_letters(thisline.text)))
 
   def get_string_sig(self,string):
     letters_only = self.get_string_letters(string)
@@ -154,22 +137,6 @@ class Poem:
         line_syllable_list.append(this_syllable_count)
       self.poem_line_syllable_list.append(line_syllable_list)
       print(thisline.text)
-    self.print_syllable_list()
-
-  def print_syllable_list(self):
-    for this_line_syllable_list in self.poem_line_syllable_list:
-      #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
-      #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
-      if (None in this_line_syllable_list):
-        print('Word with unknown syllable count found in list.')
-        print(this_line_syllable_list)
-      else:
-        print(str(sum(this_line_syllable_list)) + ' syllables in line for recommended pronunciation')
-        print(this_line_syllable_list)
-    #sorted_word_hash = sorted(self.word_hash.items(), key=lambda x:x[1],reverse=True)
-    #print(sorted_word_hash)
-    #sorted_unknown_word_list = sorted(self.unknown_word_list)
-    #print(sorted_unknown_word_list)
 
   def get_syllable_data(self):
     lines = []
@@ -197,3 +164,35 @@ class Poem:
         pass
     perline = round(total_syllables/nonempty_line_count,3)
     print(title + ',' + str(total_syllables) + ',' + str(nonempty_line_count))
+
+  def print_stanza_info(self):
+    if self.stanza_count == 1:
+      print('The poem "' + self.title + '" consists of ' + '1' + ' stanza of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.line_count) + ' total.')
+    else:
+      if len(self.stanza_unique_lengths) == 1:
+        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.line_count) + ' total.')
+      else:
+        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of irregular length.'  + ': ' + str(self.line_count) + ' total.')
+    print(self.stanzas)
+
+  def print_letter_frequencies(self):
+    for thisline in self.linelist:
+      print(thisline.text)
+      print(self.get_string_letters(thisline.text))
+      print(self.get_string_sig(thisline.text))
+      print(len(self.get_string_letters(thisline.text)))
+
+  def print_syllable_list(self):
+    for this_line_syllable_list in self.poem_line_syllable_list:
+      #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
+      #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
+      if (None in this_line_syllable_list):
+        print('Word with unknown syllable count found in list.')
+        print(this_line_syllable_list)
+      else:
+        print(str(sum(this_line_syllable_list)) + ' syllables in line for recommended pronunciation')
+        print(this_line_syllable_list)
+    #sorted_word_hash = sorted(self.word_hash.items(), key=lambda x:x[1],reverse=True)
+    #print(sorted_word_hash)
+    #sorted_unknown_word_list = sorted(self.unknown_word_list)
+    #print(sorted_unknown_word_list)
