@@ -11,12 +11,21 @@ class Book:
     self.author = ''
     self.poem_list = []
 
+class Line:
+  def __init__(self,linetext):
+    self.text = linetext
+
 class Poem:
   #def __init__(self,title,dedicatee,lines):
   def __init__(self,lines):
     #self.title = title
     #self.dedicatee = dedicatee
     self.lines = lines
+    self.linelist = []
+    for thisline in lines:
+      actual_line = Line(thisline)
+      self.linelist.append(actual_line)
+    self.line_list = []
     self.get_firstline()
     self.poem_word_hash = {}
     self.unknown_word_list = []
@@ -28,7 +37,10 @@ class Poem:
     return len(self.lines)
 
   def get_firstline(self):
-    lines = self.lines
+    #lines = self.lines:
+    lines = []
+    for thisline in self.linelist:
+      lines.append(thisline.text)
     if lines[0] and not lines[1] and lines[2]:
       self.title = lines[0]
       self.dedicatee = ''
@@ -41,7 +53,10 @@ class Poem:
       raise 'This does not fit the format'
 
   def get_body(self):
-    lines = self.lines
+    #lines = self.lines
+    lines = []
+    for thisline in self.linelist:
+      lines.append(thisline.text)
     title = self.title
     dedicatee = self.dedicatee
     firstline = self.firstline
@@ -60,7 +75,10 @@ class Poem:
     print(self.stanzas)
 
   def get_stanzas(self):
-    lines = self.lines
+    #lines = self.lines
+    lines = []
+    for thisline in self.linelist:
+      lines.append(thisline.text)
     stanza_count = 0
     stanza_length = 0
     line_count = 0
@@ -101,7 +119,10 @@ class Poem:
     #self.print_stanza_info()
 
   def print_letter_frequencies(self):
-    lines = self.lines
+    #lines = self.lines
+    lines = []
+    for thisline in self.linelist:
+      lines.append(thisline.text)
     for thisline in lines:
       print(thisline)
       print(self.get_string_letters(thisline))
@@ -139,7 +160,10 @@ class Poem:
     return word_list
 
   def get_word_frequencies(self):
-    lines = self.lines
+    #lines = self.lines
+    lines = []
+    for thisline in self.linelist:
+      lines.append(thisline.text)
     total_syllables = 0
     for thisline in lines:
       word_list = self.get_word_list(thisline)
@@ -150,7 +174,10 @@ class Poem:
           self.poem_word_hash[thisword] = 1
 
   def get_syllable_list(self):
-    lines = self.lines
+    #lines = self.lines
+    lines = []
+    for thisline in self.linelist:
+      lines.append(thisline.text)
     for thisline in lines:
       word_list = self.get_word_list(thisline)
       line_syllable_list = []
@@ -183,7 +210,10 @@ class Poem:
     #print(sorted_unknown_word_list)
 
   def get_syllable_data(self):
-    lines = self.lines
+    #lines = self.lines
+    lines = []
+    for thisline in self.linelist:
+      lines.append(thisline.text)
     total_syllables = 0
     nonempty_line_count = 0
     title = lines[0]
