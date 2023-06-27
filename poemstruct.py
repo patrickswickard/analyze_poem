@@ -22,7 +22,6 @@ class Poem:
     for thisline in lines:
       actual_line = Line(thisline)
       self.linelist.append(actual_line)
-    self.line_list = []
     self.get_firstline()
     self.poem_word_hash = {}
     self.unknown_word_list = []
