@@ -11,8 +11,8 @@ def analyze_poem(thispoem):
   thispoem.print_stanza_info()
   thispoem.print_letter_frequencies()
   thispoem.get_word_frequencies()
-  thispoem.get_syllable_list()
   thispoem.get_syllable_data()
+#  print(thispoem.poem_word_hash)
 
 def read_poem(poem_file):
   with open(poem_file) as fd:

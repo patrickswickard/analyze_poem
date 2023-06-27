@@ -52,7 +52,7 @@ class Poem:
   def get_stanzas(self):
     stanza_count = 0
     stanza_length = 0
-    line_count = 0
+    nonempty_line_count = 0
     stanzas = []
     in_stanza = False
     poem_body = self.body
@@ -61,11 +61,11 @@ class Poem:
         if in_stanza:
           in_stanza = True
           stanza_length += 1
-          line_count += 1
+          nonempty_line_count += 1
         else:
           in_stanza = True
           stanza_length += 1
-          line_count += 1
+          nonempty_line_count += 1
       else:
         if in_stanza:
           in_stanza = False
@@ -79,13 +79,9 @@ class Poem:
     else:
       pass
     stanza_count = len(stanzas)
-    self.nonempty_lines = []
-    for thisline in self.linelist:
-      if thisline.text:
-        self.nonempty_lines.append(thisline)
     self.stanza_count = stanza_count
     self.stanza_unique_lengths = numpy.unique(stanzas)
-    self.line_count = line_count
+    self.nonempty_line_count = nonempty_line_count
     self.stanzas = stanzas
 
   def get_string_sig(self,string):
@@ -128,51 +124,43 @@ class Poem:
         else:
           self.poem_word_hash[thisword] = 1
 
-  def get_syllable_list(self):
-    for thisline in self.linelist:
-      word_list = self.get_word_list(thisline.text)
-      line_syllable_list = []
-      for thisword in word_list:
-        this_syllable_count = self.get_string_syllable_count(thisword)
-        line_syllable_list.append(this_syllable_count)
-      self.poem_line_syllable_list.append(line_syllable_list)
-      print(thisline.text)
+  def get_syllable_list(self,string):
+    word_list = self.get_word_list(string)
+    line_syllable_list = []
+    for thisword in word_list:
+      this_syllable_count = self.get_string_syllable_count(thisword)
+      line_syllable_list.append(this_syllable_count)
+    return line_syllable_list
 
   def get_syllable_data(self):
     lines = []
     for thisline in self.linelist:
       lines.append(thisline.text)
     total_syllables = 0
-    nonempty_line_count = 0
-    title = lines[0]
+    nonempty_line_count = self.nonempty_line_count
     for thisline in self.linelist:
       if thisline.text:
-        nonempty_line_count += 1
         word_list = self.get_word_list(thisline.text)
-        for thisword in word_list:
-          if self.poem_word_hash.get(thisword):
-            self.poem_word_hash[thisword] = self.poem_word_hash[thisword] + 1
-          else:
-            self.poem_word_hash[thisword] = 1
-        syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
-        if (None in syllable_list):
+        #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
+        line_syllable_list = self.get_syllable_list(thisline.text)
+        self.poem_line_syllable_list.append(line_syllable_list)
+        if (None in line_syllable_list):
           raise('Word with unknown syllable count found in list.')
         else:
-          number_of_syllables = sum(syllable_list)
+          number_of_syllables = sum(line_syllable_list)
           total_syllables += number_of_syllables
-      else:
-        pass
     perline = round(total_syllables/nonempty_line_count,3)
-    print(title + ',' + str(total_syllables) + ',' + str(nonempty_line_count))
+    print(self.title + ',' + str(total_syllables) + ',' + str(nonempty_line_count))
+    print(str(perline))
 
   def print_stanza_info(self):
     if self.stanza_count == 1:
-      print('The poem "' + self.title + '" consists of ' + '1' + ' stanza of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.line_count) + ' total.')
+      print('The poem "' + self.title + '" consists of ' + '1' + ' stanza of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.nonempty_line_count) + ' total.')
     else:
       if len(self.stanza_unique_lengths) == 1:
-        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.line_count) + ' total.')
+        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.nonempty_line_count) + ' total.')
       else:
-        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of irregular length.'  + ': ' + str(self.line_count) + ' total.')
+        print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of irregular length.'  + ': ' + str(self.nonempty_line_count) + ' total.')
     print(self.stanzas)
 
   def print_letter_frequencies(self):
