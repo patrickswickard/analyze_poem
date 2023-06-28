@@ -14,6 +14,7 @@ class Book:
 class Line:
   def __init__(self,linetext):
     self.text = linetext
+    self.syllable_list = []
 
 class Poem:
   def __init__(self,lines):
@@ -28,6 +29,8 @@ class Poem:
     self.body = self.get_body()
     self.get_stanzas()
     self.poem_line_syllable_list = []
+    self.get_syllable_data()
+    self.get_word_frequencies()
 
   def length(self):
     return len(self.lines)
@@ -142,7 +145,8 @@ class Poem:
       if thisline.text:
         word_list = self.get_word_list(thisline.text)
         #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
-        line_syllable_list = self.get_syllable_list(thisline.text)
+        thisline.syllable_list = self.get_syllable_list(thisline.text)
+        line_syllable_list = thisline.syllable_list
         self.poem_line_syllable_list.append(line_syllable_list)
         if (None in line_syllable_list):
           raise('Word with unknown syllable count found in list.')
@@ -150,8 +154,8 @@ class Poem:
           number_of_syllables = sum(line_syllable_list)
           total_syllables += number_of_syllables
     perline = round(total_syllables/nonempty_line_count,3)
-    print(self.title + ',' + str(total_syllables) + ',' + str(nonempty_line_count))
-    print(str(perline))
+    print('1 - title, syllables, lines:' + self.title + ',' + str(total_syllables) + ',' + str(nonempty_line_count))
+    print('2 - average syllables per non-blank line:' + str(perline))
 
   def print_stanza_info(self):
     if self.stanza_count == 1:
@@ -161,26 +165,37 @@ class Poem:
         print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of length' + str(self.stanza_unique_lengths) + '.'  + ': ' + str(self.nonempty_line_count) + ' total.')
       else:
         print('The poem "' + self.title + '" consists of ' + str(self.stanza_count) + ' stanzas of irregular length.'  + ': ' + str(self.nonempty_line_count) + ' total.')
-    print(self.stanzas)
+    print('6: stanza structure:' + str(self.stanzas))
+    print('\n')
 
   def print_letter_frequencies(self):
     for thisline in self.linelist:
-      print(thisline.text)
-      print(self.get_string_letters(thisline.text))
-      print(self.get_string_sig(thisline.text))
-      print(len(self.get_string_letters(thisline.text)))
+      if thisline.text:
+        print('Line text:' + thisline.text)
+        print('Letters:  ' + self.get_string_letters(thisline.text))
+        print('Sig:      ' + self.get_string_sig(thisline.text))
+        print('Line length letters only:' + str(len(self.get_string_letters(thisline.text))))
+        print('\n')
+
+  def print_word_frequencies(self):
+    print(self.poem_word_hash)
 
   def print_syllable_list(self):
     for this_line_syllable_list in self.poem_line_syllable_list:
-      #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
       #syllable_list = list(map(lambda x: self.get_string_syllable_count(x), word_list))
       if (None in this_line_syllable_list):
         print('Word with unknown syllable count found in list.')
         print(this_line_syllable_list)
       else:
         print(str(sum(this_line_syllable_list)) + ' syllables in line for recommended pronunciation')
-        print(this_line_syllable_list)
+        print('Syllable structure:' + str(this_line_syllable_list))
     #sorted_word_hash = sorted(self.word_hash.items(), key=lambda x:x[1],reverse=True)
     #print(sorted_word_hash)
     #sorted_unknown_word_list = sorted(self.unknown_word_list)
     #print(sorted_unknown_word_list)
+
+  def print_line_info(self):
+    self.print_letter_frequencies()
+    self.print_word_frequencies()
+    self.print_syllable_list()
+
