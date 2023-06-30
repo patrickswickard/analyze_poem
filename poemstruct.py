@@ -189,7 +189,7 @@ class Poem:
       print('Word with unknown syllable count found in list.')
       print(thisline.syllable_list)
     else:
-      print(str(sum(thisline.syllable_list)) + ' syllables in line for recommended pronunciation')
+      print(str(thisline.syllable_count) + ' syllables in line for recommended pronunciation')
       print('Syllable structure:' + str(thisline.syllable_list))
       print()
 
