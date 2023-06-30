@@ -185,14 +185,15 @@ class Poem:
     print(self.poem_word_hash)
 
   def print_line_syllable_list(self,thisline):
-    print(thisline.text)
-    if (None in thisline.syllable_list):
-      print('Word with unknown syllable count found in list.')
-      print(thisline.syllable_list)
-    else:
-      print(str(sum(thisline.syllable_list)) + ' syllables in line for recommended pronunciation')
-      print('Syllable structure:' + str(thisline.syllable_list))
-      print()
+    if thisline.text:
+      print(thisline.text)
+      if (None in thisline.syllable_list):
+        print('Word with unknown syllable count found in list.')
+        print(thisline.syllable_list)
+      else:
+        print(str(sum(thisline.syllable_list)) + ' syllables in line for recommended pronunciation')
+        print('Syllable structure:' + str(thisline.syllable_list))
+        print()
 
   def print_line_info(self):
     for thisline in self.linelist:
