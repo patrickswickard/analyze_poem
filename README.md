@@ -15,7 +15,7 @@ When I sitting heard the astronomer where he lectured with much applause in the 
 How soon unaccountable I became tired and sick,\
 Till rising and gliding out I wander’d off by myself,\
 In the mystical moist night-air, and from time to time,\
-Look’d up in perfect silence at the stars.\
+Look’d up in perfect silence at the stars.
 
 -----
 
