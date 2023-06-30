@@ -16,6 +16,9 @@ class Line:
     self.text = linetext
     self.syllable_list = []
     self.syllable_count = 0
+    self.letters_only = ''
+    self.sig = ''
+    self.length_letters_only = 0
 
 class Poem:
   def __init__(self,lines):
@@ -32,6 +35,7 @@ class Poem:
     self.poem_line_syllable_list = []
     self.get_syllable_data()
     self.get_word_frequencies()
+    self.get_letter_frequencies()
 
   def length(self):
     return len(self.lines)
@@ -52,6 +56,10 @@ class Poem:
   def get_body(self):
     firstline = self.firstline
     return self.linelist[firstline:]
+
+  def get_letter_frequencies(self):
+    for thisline in self.linelist:
+      self.get_line_letter_frequencies(thisline)
 
   def get_stanzas(self):
     stanza_count = 0
@@ -118,6 +126,11 @@ class Poem:
     word_list = words_only.split()
     return word_list
 
+  def get_line_letter_frequencies(self,thisline):
+    thisline.letters_only = self.get_string_letters(thisline.text)
+    thisline.sig = self.get_string_sig(thisline.text)
+    thisline.length_letters_only = len(thisline.letters_only)
+
   def get_word_frequencies(self):
     total_syllables = 0
     for thisline in self.linelist:
@@ -174,11 +187,12 @@ class Poem:
     print('\n')
 
   def print_line_letter_frequencies(self,thisline):
-    print('Line text:' + thisline.text)
-    print('Letters:  ' + self.get_string_letters(thisline.text))
-    print('Sig:      ' + self.get_string_sig(thisline.text))
-    print('Line length letters only:' + str(len(self.get_string_letters(thisline.text))))
-    print('\n')
+    if thisline.text:
+      print('Line text:' + thisline.text)
+      print('Letters:  ' + thisline.letters_only)
+      print('Sig:      ' + thisline.sig)
+      print('Line length letters only:' + str(thisline.length_letters_only))
+      print('\n')
 
   def print_poem_word_frequencies(self):
     print(self.poem_word_hash)
