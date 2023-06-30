@@ -41,7 +41,7 @@ Whitman got bored with the learn'd astronomer yammering about his findings.  But
 
 I humbly submit these tools to the user as an alternative tool for seeking beauty and meaning.  Let me know if you find anything good.
 
-P.E.S.
+P.E.S.\
 2023-06-30
 
 
