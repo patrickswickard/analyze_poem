@@ -41,7 +41,7 @@ Tools are tools.  There's no obligation to use them, and using them foolishly ca
 
 Whitman got bored with the learn'd astronomer yammering about his findings.  But if he caught the astronomer on a different night, he'd get to peek through his telescope and see a different view of the sky he found so dazzling, while sharing breaths of the same mystical moist night air with that scholar.  Maybe the astronomer would point his instrument to a different section of the sky that looks empty to the naked eye but is full of thrilling details once you gaze at it through a lens.  Maybe the astronomer would listen to the poet eloquently expressing the beauty of what he was seeing in words, or maybe they'd just stare up at it together in silent appreciation, words and numbers forgotten for the moment.
 
-I humbly submit these tools to the user as an alternative tool for seeking beauty and meaning in text.  Let me know if you find anything good.
+I humbly submit these tools to the user as an alternative way of seeking beauty and meaning in text.  Let me know if you find anything good.
 
 P.E.S.\
 2023-06-30
