@@ -174,28 +174,27 @@ class Poem:
     print('\n')
 
   def print_line_letter_frequencies(self,thisline):
-    if thisline.text:
-      print('Line text:' + thisline.text)
-      print('Letters:  ' + self.get_string_letters(thisline.text))
-      print('Sig:      ' + self.get_string_sig(thisline.text))
-      print('Line length letters only:' + str(len(self.get_string_letters(thisline.text))))
-      print('\n')
+    print('Line text:' + thisline.text)
+    print('Letters:  ' + self.get_string_letters(thisline.text))
+    print('Sig:      ' + self.get_string_sig(thisline.text))
+    print('Line length letters only:' + str(len(self.get_string_letters(thisline.text))))
+    print('\n')
 
   def print_poem_word_frequencies(self):
     print(self.poem_word_hash)
 
   def print_line_syllable_list(self,thisline):
-    if thisline.text:
-      print(thisline.text)
-      if (None in thisline.syllable_list):
-        print('Word with unknown syllable count found in list.')
-        print(thisline.syllable_list)
-      else:
-        print(str(sum(thisline.syllable_list)) + ' syllables in line for recommended pronunciation')
-        print('Syllable structure:' + str(thisline.syllable_list))
-        print()
+    print(thisline.text)
+    if (None in thisline.syllable_list):
+      print('Word with unknown syllable count found in list.')
+      print(thisline.syllable_list)
+    else:
+      print(str(sum(thisline.syllable_list)) + ' syllables in line for recommended pronunciation')
+      print('Syllable structure:' + str(thisline.syllable_list))
+      print()
 
   def print_line_info(self):
     for thisline in self.linelist:
-      self.print_line_letter_frequencies(thisline)
-      self.print_line_syllable_list(thisline)
+      if thisline:
+        self.print_line_letter_frequencies(thisline)
+        self.print_line_syllable_list(thisline)
