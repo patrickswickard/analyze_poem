@@ -173,7 +173,7 @@ class Poem:
     print('6: stanza structure:' + str(self.stanzas))
     print('\n')
 
-  def print_letter_frequencies(self,thisline):
+  def print_line_letter_frequencies(self,thisline):
     if thisline.text:
       print('Line text:' + thisline.text)
       print('Letters:  ' + self.get_string_letters(thisline.text))
@@ -181,10 +181,10 @@ class Poem:
       print('Line length letters only:' + str(len(self.get_string_letters(thisline.text))))
       print('\n')
 
-  def print_word_frequencies(self):
+  def print_poem_word_frequencies(self):
     print(self.poem_word_hash)
 
-  def print_syllable_list(self,thisline):
+  def print_line_syllable_list(self,thisline):
     print(thisline.text)
     this_line_syllable_list = thisline.syllable_list
     if (None in this_line_syllable_list):
@@ -197,6 +197,5 @@ class Poem:
 
   def print_line_info(self):
     for thisline in self.linelist:
-      self.print_letter_frequencies(thisline)
-      self.print_syllable_list(thisline)
-    self.print_word_frequencies()
+      self.print_line_letter_frequencies(thisline)
+      self.print_line_syllable_list(thisline)

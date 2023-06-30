@@ -9,6 +9,7 @@ def analyze_poem(thispoem):
   thispoem.print_poem_stanza_info()
   thispoem.print_poem_syllable_info()
   thispoem.print_line_info()
+  thispoem.print_poem_word_frequencies()
 
 def read_poem(poem_file):
   with open(poem_file) as fd:
