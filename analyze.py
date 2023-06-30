@@ -3,16 +3,11 @@ import re
 import json
 import poemstruct
 
-#with open('dict.json') as fd:
-#  syllable_dict = json.loads(fd.read())
-
 def analyze_poem(thispoem):
   print('*********************')
   print('I read a poem today!')
-  thispoem.print_stanza_info()
-  #thispoem.print_letter_frequencies()
-  #thispoem.print_word_frequencies()
-  #thispoem.print_syllable_list()
+  thispoem.print_poem_stanza_info()
+  thispoem.print_poem_syllable_info()
   thispoem.print_line_info()
 
 def read_poem(poem_file):
