@@ -1,5 +1,7 @@
 A DATA SCIENTIST'S APOLOGY
 
+(with apologies to G. H. Hardy)
+
 Why analyze poetry?  Why bring numbers into the picture at all?  Poetry is pretty, math is ugly, right?  Omar Khayyam never suggested sitting beneath the bough with a book of verses, a jug of wine, a loaf of bread, *an abacus and slide rule*, and thou".  It's bad enough that pretentious idiots analyze poems with words.  Why bring numbers into the picture as well?
 
 I'm going to lead this off with my *least* favorite Walt Whitman poem:
