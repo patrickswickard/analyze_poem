@@ -10,6 +10,7 @@ def analyze_poem(thispoem):
   thispoem.print_poem_syllable_info()
   thispoem.print_line_info()
   thispoem.print_poem_word_frequencies()
+  thispoem.print_poem_letter_frequencies()
 
 def read_poem(poem_file):
   with open(poem_file) as fd:
@@ -26,9 +27,7 @@ for i in values:
   this_poem = read_poem(poem_file)
   print(str(this_poem.length()))
   analyze_poem(this_poem)
-  print('word hash for ' + this_poem.title + ':')
-  print(this_poem.poem_word_hash)
-  for thiskey,thisvalue in this_poem.poem_word_hash.items():
+  for thiskey,thisvalue in this_poem.poem_word_frequencies_hash.items():
     if corpus_word_frequency_plath.get(thiskey):
       corpus_word_frequency_plath[thiskey] = corpus_word_frequency_plath[thiskey] + thisvalue
     else:
