@@ -34,7 +34,8 @@ class Poem:
     self.get_stanzas()
     self.poem_line_syllable_list = []
     self.get_syllable_data()
-    self.get_word_frequencies()
+    self.poem_word_frequencies_hash = {}
+    self.get_poem_word_frequencies()
     self.get_letter_frequencies()
 
   def length(self):
@@ -131,15 +132,28 @@ class Poem:
     thisline.sig = self.get_string_sig(thisline.text)
     thisline.length_letters_only = len(thisline.letters_only)
 
-  def get_word_frequencies(self):
+  def get_line_word_frequencies(self,thisline):
+    thisline.word_frequencies_hash = self.get_string_word_frequencies(thisline.text)
+
+  def get_poem_word_frequencies(self):
     total_syllables = 0
     for thisline in self.linelist:
-      word_list = self.get_word_list(thisline.text)
-      for thisword in word_list:
-        if self.poem_word_hash.get(thisword):
-          self.poem_word_hash[thisword] = self.poem_word_hash[thisword] + 1
+      self.get_line_word_frequencies(thisline)
+      for thiskey,thisvalue in thisline.word_frequencies_hash.items():
+        if self.poem_word_frequencies_hash.get(thiskey):
+          self.poem_word_frequencies_hash[thiskey] = self.poem_word_frequencies_hash[thiskey] + thisvalue
         else:
-          self.poem_word_hash[thisword] = 1
+          self.poem_word_frequencies_hash[thiskey] = thisvalue
+
+  def get_string_word_frequencies(self,string):
+    this_word_hash = {}
+    word_list = self.get_word_list(string)
+    for thisword in word_list:
+      if this_word_hash.get(thisword):
+        this_word_hash[thisword] = this_word_hash[thisword] + 1
+      else:
+        this_word_hash[thisword] = 1
+    return this_word_hash
 
   def get_string_syllable_list(self,string):
     word_list = self.get_word_list(string)

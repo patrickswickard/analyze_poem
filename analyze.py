@@ -39,8 +39,8 @@ for i in values:
   print(str(this_poem.length()))
   analyze_poem(this_poem)
   print('word hash for ' + this_poem.title + ':')
-  print(this_poem.poem_word_hash)
-  for thiskey,thisvalue in this_poem.poem_word_hash.items():
+  print(this_poem.poem_word_frequencies_hash)
+  for thiskey,thisvalue in this_poem.poem_word_frequencies_hash.items():
     if corpus_word_frequency_sylph.get(thiskey):
       corpus_word_frequency_sylph[thiskey] = corpus_word_frequency_sylph[thiskey] + thisvalue
     else:
