@@ -89,3 +89,7 @@ We also may wish to make a json file consisting of an entire corpus (as in group
 We need to deal intelligently with "missing words" from our dictionary.  Current expectation is that the dictionary will contain all words with syllable counts or be "patched" to do so for analysis.  This requires better tools than we currently have.
 
 As a stretch goal, many but not all words in dictionary potentially have a stress pattern for expected pronunciation, which can be useful for analysis.
+
+----------------------------
+
+I have added some Baudelaire translations to this to demonstrate how much translations of the same poem can vary by translator to demonstrate some numbers that can be pulled quickly from this tool for style comparisons.
