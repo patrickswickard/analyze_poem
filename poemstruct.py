@@ -27,7 +27,7 @@ class Line:
     thishash['syllable_count'] = self.syllable_count
     thishash['letters_only'] = self.letters_only
     thishash['sig'] = self.sig
-    thishash['length_letters_only'] = 0
+    thishash['length_letters_only'] = self.length_letters_only
     return thishash
 
 class Poem:
