@@ -6,6 +6,7 @@ import poemstruct
 def analyze_poem(thispoem):
   print('*********************')
   print('I read a poem today!')
+  print(thispoem.title)
   thispoem.print_poem_stanza_info()
   thispoem.print_poem_syllable_info()
   thispoem.print_line_info()
@@ -25,7 +26,6 @@ values = range(40)
 for i in values:
   poem_file = '/home/swickape/projects/github/plathagrams/spsidebyside' + str(i+1) + '.txt'
   this_poem = read_poem(poem_file)
-  print(str(this_poem.length()))
   analyze_poem(this_poem)
   for thiskey,thisvalue in this_poem.poem_word_frequencies_hash.items():
     if corpus_word_frequency_plath.get(thiskey):
