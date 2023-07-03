@@ -32,6 +32,6 @@ With dirt, opaque and sticky, damp and dusty,
 
 I'll be your pall and shroud, beloved pest! 
 The witness of your venom, and its test, 
-Dear poison, angel-brewed with deadly art &mdash; 
+Dear poison, angel-brewed with deadly art -- 
 Life, death, and dear corrosion of my heart.
 

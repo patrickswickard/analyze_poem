@@ -22,5 +22,5 @@ S'&eacute;lancer vers les champs lumineux et sereins;
 
 Celui dont les pensers, comme des alouettes,
 Vers les cieux le matin prennent un libre essor,
-&mdash; Qui plane sur la vie, et comprend sans effort
+-- Qui plane sur la vie, et comprend sans effort
 Le langage des fleurs et des choses muettes!

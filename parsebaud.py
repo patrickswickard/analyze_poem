@@ -36,6 +36,7 @@ for i in range(98,232):
     if inpoem:
       if not re.match(r"^\s*(?:<p>|</p>)\s*$",thisline):
         thislinefixed = re.sub(r"(<b>|</b>|<br>)\s*","",thisline)
+        thislinefixed = re.sub(r"&mdash;","--",thislinefixed)
         thispoem.append(thislinefixed)
     poem_count = 0
     for foundpoem in poemlist:

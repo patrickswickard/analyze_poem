@@ -12,7 +12,7 @@ Perfumes, sounds, and colors correspond.
 
 There are perfumes as cool as the flesh of children,
 Sweet as oboes, green as meadows
-&mdash; And others are corrupt, and rich, triumphant,
+-- And others are corrupt, and rich, triumphant,
 
 With power to expand into infinity,
 Like amber and incense, musk, benzoin, 

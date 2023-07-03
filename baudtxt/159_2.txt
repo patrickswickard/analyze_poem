@@ -8,7 +8,7 @@ And heavy locks of hair enveloped in receipts,
 Hides fewer secrets than my gloomy brain. 
 It is a pyramid, a vast burial vault 
 Which contains more corpses than potter's field.
-&mdash; I am a cemetery abhorred by the moon, 
+-- I am a cemetery abhorred by the moon, 
 In which long worms crawl like remorse 
 And constantly harass my dearest dead. 
 I am an old boudoir full of withered roses, 
@@ -20,7 +20,7 @@ Nothing is so long as those limping days,
 When under the heavy flakes of snowy years 
 Ennui, the fruit of dismal apathy, 
 Becomes as large as immortality. 
-&mdash; Henceforth you are no more, O living matter! 
+-- Henceforth you are no more, O living matter! 
 Than a block of granite surrounded by vague terrors, 
 Dozing in the depths of a hazy Sahara 
 An old sphinx ignored by a heedless world, 

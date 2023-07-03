@@ -33,6 +33,6 @@ Je suis les membres et la roue,
 Et la victime et le bourreau!
 
 Je suis de mon coeur le vampire,
-&mdash; Un de ces grands abandonn&eacute;s
+-- Un de ces grands abandonn&eacute;s
 Au rire &eacute;ternel condamn&eacute;s
 Et qui ne peuvent plus sourire!

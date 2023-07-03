@@ -5,7 +5,7 @@ Le Po&egrave;te appara&icirc;t en ce monde ennuy&eacute;,
 Sa m&egrave;re &eacute;pouvant&eacute;e et pleine de blasph&egrave;mes
 Crispe ses poings vers Dieu, qui la prend en piti&eacute;:
 
-&mdash; &laquo;Ah! que n'ai-je mis bas tout un noeud de vip&egrave;res,
+-- &laquo;Ah! que n'ai-je mis bas tout un noeud de vip&egrave;res,
 Plut&ocirc;t que de nourrir cette d&eacute;rision!
 Maudite soit la nuit aux plaisirs &eacute;ph&eacute;m&egrave;res
 O&ugrave; mon ventre a con&ccedil;u mon expiation!
@@ -70,7 +70,7 @@ Le Po&egrave;te serein l&egrave;ve ses bras pieux
 Et les vastes &eacute;clairs de son esprit lucide
 Lui d&eacute;robent l'aspect des peuples furieux:
 
-&mdash; &laquo;Soyez b&eacute;ni, mon Dieu, qui donnez la souffrance
+-- &laquo;Soyez b&eacute;ni, mon Dieu, qui donnez la souffrance
 Comme un divin rem&egrave;de &agrave; nos impuret&eacute;s
 Et comme la meilleure et la plus pure essence
 Qui pr&eacute;pare les forts aux saintes volupt&eacute;s!

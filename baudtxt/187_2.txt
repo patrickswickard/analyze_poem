@@ -5,12 +5,12 @@ And soaring freely around the rigging;
 Beneath a cloudless sky the ship was rolling 
 Like an angel drunken with the radiant sun.
 
-What is this black, gloomy island? &mdash; It's Cythera, 
+What is this black, gloomy island? -- It's Cythera, 
 They tell us, a country celebrated in song, 
 The banal Eldorado of old bachelors. 
 Look at it; after all, it is a wretched land.
 
-&mdash; Island of sweet secrets, of the heart's festivals!
+-- Island of sweet secrets, of the heart's festivals!
 The beautiful shade of ancient Venus 
 Hovers above your seas like a perfume 
 And fills all minds with love and languidness.
@@ -21,7 +21,7 @@ Where the sighs of hearts in adoration
 Roll like incense over a garden of roses
 
 Or like the eternal cooing of wood-pigeons!
-&mdash; Cythera was now no more than the barrenest land,
+-- Cythera was now no more than the barrenest land,
 A rocky desert disturbed by shrill cries.
 But I caught a glimpse of a singular object!
 
@@ -65,7 +65,7 @@ I felt all the stabbing beaks of the crows
 And the jaws of the black panthers who loved so much 
 In other days to tear my flesh to shreds.
 
-&mdash; The sky was charming and the sea was smooth; 
+-- The sky was charming and the sea was smooth; 
 For me thenceforth all was black and bloody, 
 Alas! and I had in that allegory 
 Wrapped up my heart as in a heavy shroud.

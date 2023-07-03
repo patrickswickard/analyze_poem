@@ -68,17 +68,17 @@ Pour savoir si la mer est indulgente et bonne!
 
 De la m&acirc;le Sapho, l'amante et le po&egrave;te, 
 Plus belle que V&eacute;nus par ses mornes p&acirc;leurs! 
-&mdash; L'oeil d'azur est vaincu par l'oeil noir que tach&egrave;te 
+-- L'oeil d'azur est vaincu par l'oeil noir que tach&egrave;te 
 Le cercle t&eacute;n&eacute;breux trac&eacute; par les douleurs 
 De la m&acirc;le Sapho, l'amante et le po&egrave;te! 
 
-&mdash; Plus belle que V&eacute;nus se dressant sur le monde 
+-- Plus belle que V&eacute;nus se dressant sur le monde 
 Et versant les tr&eacute;sors de sa s&eacute;r&eacute;nit&eacute; 
 Et le rayonnement de sa jeunesse blonde 
 Sur le vieil Oc&eacute;an de sa fille enchant&eacute;; 
 Plus belle que V&eacute;nus se dressant sur le monde! 
 
-&mdash; De Sapho qui mourut le jour de son blasph&egrave;me, 
+-- De Sapho qui mourut le jour de son blasph&egrave;me, 
 Quand, insultant le rite et le culte invent&eacute;, 
 Elle fit son beau corps la p&acirc;ture supr&ecirc;me 
 D'un brutal dont l'orgueil punit l'impi&eacute;t&eacute; 

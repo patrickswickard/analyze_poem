@@ -5,7 +5,7 @@ The poet passed into this weary world,
 His mother, filled with fears and doubts infernal,
 Clenching her hands towards Heaven these curses hurled.
 
- &mdash; "Why rather did I not within me treasure
+ -- "Why rather did I not within me treasure
 "A knot of serpents than this thing of scorn?
 "Accursed be the night of fleeting pleasure
 "Whence in my womb this chastisement was borne!
@@ -68,7 +68,7 @@ His spouse goes crying in the public places:
 Heavenward, where he beholds a throne resplendent,
 The poet lifts his hands, devout and proud,
 And the vast lightnings of a soul transcendent
-Veil from his gaze awhile the furious crowd: &mdash; 
+Veil from his gaze awhile the furious crowd: -- 
 
 "Blessed be thou, my God, that givest sorrow,
 "Sole remedy divine for things unclean,

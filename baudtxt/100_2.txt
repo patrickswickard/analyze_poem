@@ -5,7 +5,7 @@ The Poet is brought forth in this wearisome world,
 His mother terrified and full of blasphemies 
 Raises her clenched fist to God, who pities her:
 
-&mdash; "Ah! would that I had spawned a whole knot of vipers
+-- "Ah! would that I had spawned a whole knot of vipers
 Rather than to have fed this derisive object!
 Accursed be the night of ephemeral joy
 When my belly conceived this, my expiation!
@@ -70,7 +70,7 @@ Piously, the Poet, serene, raises his arms,
 And the dazzling brightness of his illumined mind 
 Hides from his sight the raging mob:
 
-&mdash; "Praise be to You, O God, who send us suffering
+-- "Praise be to You, O God, who send us suffering
 As a divine remedy for our impurities
 And as the best and the purest essence
 To prepare the strong for holy ecstasies!

@@ -1,7 +1,7 @@
 The Carcase
 
 The object that we saw, let us recall, 
-This summer morn when warmth and beauty mingle &mdash; 
+This summer morn when warmth and beauty mingle -- 
 At the path's turn, a carcase lay asprawl
 Upon a bed of shingle.
 
@@ -11,7 +11,7 @@ Opened its paunch in careless, cynic fashion,
 Ballooned with evil gas.
 
 On this putrescence the sun blazed in gold, 
-Cooking it to a turn with eager care &mdash; 
+Cooking it to a turn with eager care -- 
 So to repay to Nature, hundredfold, 
 What she had mingled there.
 

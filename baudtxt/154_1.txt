@@ -14,7 +14,7 @@ La mer, la vaste mer, console nos labeurs!
 
 Emporte-moi wagon! enl&egrave;ve-moi, fr&eacute;gate!
 Loin! loin! ici la boue est faite de nos pleurs!
-&mdash; Est-il vrai que parfois le triste coeur d'Agathe
+-- Est-il vrai que parfois le triste coeur d'Agathe
 Dise: Loin des remords, des crimes, des douleurs,
 Emporte-moi, wagon, enl&egrave;ve-moi, fr&eacute;gate?
 
@@ -28,7 +28,7 @@ Mais le vert paradis des amours enfantines,
 Les courses, les chansons, les baisers, les bouquets,
 Les violons vibrant derri&egrave;re les collines,
 Avec les brocs de vin, le soir, dans les bosquets,
-&mdash; Mais le vert paradis des amours enfantines,
+-- Mais le vert paradis des amours enfantines,
 
 L'innocent paradis, plein de plaisirs furtifs,
 Est-il d&eacute;j&agrave; plus loin que l'Inde et que la Chine?

@@ -4,7 +4,7 @@ To F.N.
 
 Have you known such a savoury grief as I? 
 Do people say "Strange fellow!," whom you meet?
-&mdash; My amorous soul, when I was due to die, 
+-- My amorous soul, when I was due to die, 
 Felt longing mixed with horror; pain seemed sweet.
 
 Anguish and ardent hope (no factious whim) 
@@ -18,5 +18,5 @@ And then I saw the hard, cold truth for certain.
 
 I felt that dreadful dawn around me grow 
 With no surprise or vestige of a thrill. 
-The curtain rose &mdash; and I stayed waiting still.
+The curtain rose -- and I stayed waiting still.
 

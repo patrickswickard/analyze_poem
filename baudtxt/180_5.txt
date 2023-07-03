@@ -20,7 +20,7 @@ Prone at her feet; eyes blazing with delight,
 She was a strong beast gazing at the prey 
 On which her teeth had marked their savage bite.
 
-Strong beauty knelt before frail beauty there &mdash; 
+Strong beauty knelt before frail beauty there -- 
 Superb, she savored with voluptuous mood 
 The wine of triumph, and, as though in prayer, 
 Her hands solicited sweet gratitude.
@@ -30,7 +30,7 @@ The muted hymn lust raises to the skies,
 And thankfulness, sublime and infinite, 
 Which glances utter soft as long-drawn sighs.
 
-&mdash; &quot;Hippolyta, what of this strange sweet thing? 
+-- &quot;Hippolyta, what of this strange sweet thing? 
 You need not sully your first roses now 
 To brutal man as a burnt-offering 
 His violent breath would wither on the bough.
@@ -51,7 +51,7 @@ Veils to reveal the subtlest of delights,
 Cradling you gently in an endless dream.&quot;
 
 Hippolyta then raised her youthful head:
-&mdash; &quot;No ingrate, I repent not in the least, 
+-- &quot;No ingrate, I repent not in the least, 
 Delphine, but I feel choked and ill,&quot; she said, 
 &quot;As after some galling nocturnal feast.
 
@@ -73,7 +73,7 @@ And the first instrument of my damnation.&quot;
 Shaking her tragic mane, rapt, fatal-eyed, 
 Stamping her foot as on the Tripod of 
 The Oracle, Delphine, despotic, cried:
-&mdash; &quot;Who dares to speak of hell when faced with love?
+-- &quot;Who dares to speak of hell when faced with love?
 
 Curst be the first vain dreamer who evolved 
 A sterile code of laws and stupidly 

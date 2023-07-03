@@ -5,7 +5,7 @@ The Poet walks the world's wearisome sod,
 His mother, blasphemous and fearful, cowers, 
 Clenching her fist against a pitying God:
 
-&mdash; &quot;Ah, would whole knots of vipers were my spawn 
+-- &quot;Ah, would whole knots of vipers were my spawn 
 Rather than this woeful abomination! 
 Cursed be the sweet swift night and evil dawn 
 Wherein my womb conceived my expiation!
@@ -70,7 +70,7 @@ Serene, the Poet lifts rapt arms; and bright
 Luminous thoughts that shine through him alone 
 Conceal the furious rabble from his sight:
 
-&mdash; &quot;Bless&egrave;d, O God, who send woe for a cure, 
+-- &quot;Bless&egrave;d, O God, who send woe for a cure, 
 A balm divine for our impurities, 
 Of essences the noblest and most pure 
 To school the strong for holy ecstasies!

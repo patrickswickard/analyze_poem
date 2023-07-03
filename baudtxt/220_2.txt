@@ -4,14 +4,14 @@ To Victor Hugo
 
 I
 
-Andromache, I think of you! &mdash; That little stream,
+Andromache, I think of you! -- That little stream,
 That mirror, poor and sad, which glittered long ago
 With the vast majesty of your widow's grieving,
 That false Simois swollen by your tears,
 
 Suddenly made fruitful my teeming memory, 
 As I walked across the new Carrousel.
-&mdash; Old Paris is no more (the form of a city 
+-- Old Paris is no more (the form of a city 
 Changes more quickly, alas! than the human heart);
 
 I see only in memory that camp of stalls, 
@@ -69,5 +69,5 @@ Of the puny orphans withering like flowers!
 Thus in the dim forest to which my soul withdraws,
 An ancient memory sounds loud the hunting horn!
 I think of the sailors forgotten on some isle,
-&mdash; Of the captives, of the vanquished!...of many others too!
+-- Of the captives, of the vanquished!...of many others too!
 

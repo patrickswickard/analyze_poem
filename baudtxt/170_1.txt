@@ -14,6 +14,6 @@ La Haine est un ivrogne au fond d'une taverne,
 Qui sent toujours la soif na&icirc;tre de la liqueur
 Et se multiplier comme l'hydre de Lerne.
 
-&mdash; Mais les buveurs heureux connaissent leur vainqueur,
+-- Mais les buveurs heureux connaissent leur vainqueur,
 Et la Haine est vou&eacute;e &agrave; ce sort lamentable
 De ne pouvoir jamais s'endormir sous la table.

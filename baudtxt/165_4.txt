@@ -15,7 +15,7 @@ The low-hung lamps illumining with a crude glare
 The ravaged brows of poets, the scars of grenadiers, 
 Who come to risk the earnings of their lifeblood there.
 
-&mdash; Such is the lurid spectacle that with calm dread
+-- Such is the lurid spectacle that with calm dread
 I saw as in a melancholy dream unroll:
 Myself, too, sitting in a deserted corner, my head
 Propped in my hands, mute, weary, jealous to my soul,
@@ -28,5 +28,5 @@ Some remnant of their honor, their beauty, or their wit.
 And suddenly I was affrighted at my own heart, to feel
 Such envy of all men running wildly and out of breath
 Nowhere, and who prefer, like those around that wheel,
-Pain, horror, crime, insanity &mdash; anything &mdash; to death!
+Pain, horror, crime, insanity -- anything -- to death!
 

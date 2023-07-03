@@ -4,7 +4,7 @@ Le R&ecirc;ve d'un Curieux
 
 Connais-tu, comme moi, la douleur savoureuse
 Et de toi fais-tu dire: &laquo;Oh! l'homme singulier!&raquo;
-&mdash; J'allais mourir. C'&eacute;tait dans mon &acirc;me amoureuse
+-- J'allais mourir. C'&eacute;tait dans mon &acirc;me amoureuse
 D&eacute;sir m&ecirc;l&eacute; d'horreur, un mal particulier;
 
 Angoisse et vif espoir, sans humeur factieuse.
@@ -17,5 +17,5 @@ Ha&iuml;ssant le rideau comme on hait un obstacle...
 Enfin la v&eacute;rit&eacute; froide se r&eacute;v&eacute;la:
 
 J'&eacute;tais mort sans surprise, et la terrible aurore
-M'enveloppait. &mdash; Eh quoi! n'est-ce donc que cela?
+M'enveloppait. -- Eh quoi! n'est-ce donc que cela?
 La toile &eacute;tait lev&eacute;e et j'attendais encore.

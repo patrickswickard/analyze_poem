@@ -12,7 +12,7 @@ where we shall dine and rest among our peers;
 
 Death is an angel, with his fingers full
 of magic sleep and dreams most wonderful,
-&mdash; who smoothes the bed whereon the beggar lies;
+-- who smoothes the bed whereon the beggar lies;
 
 Death is the glory of the gods, the gold
 all poor folk hoard, their fatherland of old,

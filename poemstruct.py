@@ -136,6 +136,7 @@ class Poem:
       return this_word_syllable
     else:
       self.unknown_word_list.append(thisword_original)
+      print("WARNING" + thisword + "  does not have syllable")
       return None
 
   def get_word_list(self,string):

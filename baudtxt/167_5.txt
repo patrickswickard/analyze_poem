@@ -16,7 +16,7 @@ When woman is sick of love, as the writer of his work.
 Here and there a house sent up a thin smoke.
 Women of the streets, sunk in stupid sleep,
 Seemed all raw eyelid, and gasping lip.
-&mdash; And the poor's womenfolk, hugging the chilly droop
+-- And the poor's womenfolk, hugging the chilly droop
 Of lank breasts, blew on their fingers, and their soup.
 The extra pinch of cold, amid that of penury,
 Added, for women in labour, its insult to injury.
@@ -25,7 +25,7 @@ Broke like a jet of blood through the spasm of a cough.
 Buildings still swam in vague tides of mist;
 And in silenced hospitals, with a last
 Convulsive rattle, the dying gave up breath,
-&mdash; While night revellers staggered home, tired to death.
+-- While night revellers staggered home, tired to death.
 
 Morning, shivering in her robe of rose and green,
 Made her hesitant way along the deserted Seine,

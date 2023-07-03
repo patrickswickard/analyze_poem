@@ -2,14 +2,14 @@ The Swan
 
 To Victor Hugo
 
-Andromache! &mdash; This shallow stream, the brief
+Andromache! -- This shallow stream, the brief
 Mirror you once so grandly overcharged
 With your vast majesty of widowed grief,
 This lying Simois your tears enlarged,
 
 Evoked your name, and made me think of you, 
 As I was crossing the new Carrousel.
-&mdash; Old Paris is no more (cities renew, 
+-- Old Paris is no more (cities renew, 
 Quicker than human hearts, their changing spell).
 
 In mind I see that camp of huts, the muddle 
@@ -20,7 +20,7 @@ Where bric-a-brac lay glittering in piles.
 Once a menagerie parked there. 
 And there it chanced one morning, when from slumber freed, 
 Labour stands up, and Transport through still air 
-Rumbles its sombre hurricane of speed, &mdash; 
+Rumbles its sombre hurricane of speed, -- 
 
 A swan escaped its cage: and as its feet 
 With finny palms on the harsh pavement scraped, 
@@ -47,11 +47,11 @@ My memories are heavier than rocks.
 Passing the Louvre, one image makes me sad:
 That swan, like other exiles that we knew,
 Grandly absurd, with gestures of the mad,
-Gnawed by one craving! &mdash; Then I think of you,
+Gnawed by one craving! -- Then I think of you,
 
 Who fell from your great husband's arms, to be 
 A beast of freight for Pyrrhus, and for life, 
-Bowed by an empty tomb in ecstasy &mdash; 
+Bowed by an empty tomb in ecstasy -- 
 Great Hector's widow! Helenus's wife!
 
 I think, too, of the starved and phthisic negress 
@@ -67,5 +67,5 @@ And skinny orphans withering like flowers.
 So in the forest of my soul's exile, 
 Remembrance winds his horn as on he rides. 
 I think of sailors stranded on an isle, 
-Captives, and slaves &mdash; and many more besides.
+Captives, and slaves -- and many more besides.
 

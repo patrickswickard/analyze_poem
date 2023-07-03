@@ -30,7 +30,7 @@ Le cantique muet que chante le plaisir,
 Et cette gratitude infinie et sublime 
 Qui sort de la paupi&egrave;re ainsi qu'un long soupir. 
 
-&mdash; &laquo;Hippolyte, cher coeur, que dis-tu de ces choses? 
+-- &laquo;Hippolyte, cher coeur, que dis-tu de ces choses? 
 Comprends-tu maintenant qu'il ne faut pas offrir 
 L'holocauste sacr&eacute; de tes premi&egrave;res roses 
 Aux souffles violents qui pourraient les fl&eacute;trir ? 
@@ -51,7 +51,7 @@ Des plaisirs plus obscurs je l&egrave;verai les voiles,
 Et je t'endormirai dans un r&ecirc;ve sans fin!&raquo; 
 
 Mais Hippolyte alors, levant sa jeune t&ecirc;te: 
-&mdash; &laquo;Je ne suis point ingrate et ne me repens pas, 
+-- &laquo;Je ne suis point ingrate et ne me repens pas, 
 Ma Delphine, je souffre et je suis inqui&egrave;te, 
 Comme apr&egrave;s un nocturne et terrible repas. 
 
@@ -73,7 +73,7 @@ Et le commencement de ma perdition!&raquo;
 Delphine secouant sa crini&egrave;re tragique, 
 Et comme tr&eacute;pignant sur le tr&eacute;pied de fer, 
 L'oeil fatal, r&eacute;pondit d'une voix despotique: 
-&mdash; &laquo;Qui donc devant l'amour ose parler d'enfer ? 
+-- &laquo;Qui donc devant l'amour ose parler d'enfer ? 
 
 Maudit soit &agrave; jamais le r&ecirc;veur inutile 
 Qui voulut le premier, dans sa stupidit&eacute;, 
@@ -92,7 +92,7 @@ Tu me rapporteras tes seins stigmatis&eacute;s...
 
 On ne peut ici-bas contenter qu'un seul ma&icirc;tre!&raquo; 
 Mais l'enfant, &eacute;panchant une immense douleur, 
-Cria soudain: &mdash; &laquo;Je sens s'&eacute;largir dans mon &ecirc;tre 
+Cria soudain: -- &laquo;Je sens s'&eacute;largir dans mon &ecirc;tre 
 Un ab&icirc;me b&eacute;ant; cet ab&icirc;me est mon coeur! 
 
 Br&ucirc;lant comme un volcan, profond comme le vide! 
@@ -105,7 +105,7 @@ Et que la lassitude am&egrave;ne le repos!
 Je veux m'an&eacute;antir dans ta gorge profonde, 
 Et trouver sur ton sein la fra&icirc;cheur des tombeaux!&raquo; 
 
-&mdash; Descendez, descendez, lamentables victimes, 
+-- Descendez, descendez, lamentables victimes, 
 Descendez le chemin de l'enfer &eacute;ternel! 
 Plongez au plus profond du gouffre, o&ugrave; tous les crimes 
 Flagell&eacute;s par un vent qui ne vient pas du ciel, 

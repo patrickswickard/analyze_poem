@@ -29,7 +29,7 @@ Luisants comme ces trous o&ugrave; l'eau dort dans la nuit;
 Ils ont les yeux divins de la petite fille
 Qui s'&eacute;tonne et qui rit &agrave; tout ce qui reluit.
 
-&mdash; Avez-vous observ&eacute; que maints cercueils de vieilles
+-- Avez-vous observ&eacute; que maints cercueils de vieilles
 Sont presque aussi petits que celui d'un enfant?
 La Mort savante met dans ces bi&egrave;res pareilles
 Un symbole d'un go&ucirc;t bizarre et captivant,
@@ -44,7 +44,7 @@ Je ne cherche, &agrave; l'aspect de ces membres discords,
 Combien de fois il faut que l'ouvrier varie
 La forme de la bo&icirc;te o&ugrave; l'on met tous ces corps.
 
-&mdash; Ces yeux sont des puits faits d'un million de larmes,
+-- Ces yeux sont des puits faits d'un million de larmes,
 Des creusets qu'un m&eacute;tal refroidi pailleta...
 Ces yeux myst&eacute;rieux ont d'invincibles charmes
 Pour celui que l'aust&egrave;re Infortune allaita!

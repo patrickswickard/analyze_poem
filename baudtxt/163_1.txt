@@ -37,7 +37,7 @@ Comme en un pi&egrave;ge de cristal,
 Cherchant par quel d&eacute;troit fatal
 Il est tomb&eacute; dans cette ge&ocirc;le;
 
-&mdash; Embl&egrave;mes nets, tableau parfait
+-- Embl&egrave;mes nets, tableau parfait
 D'une fortune irr&eacute;m&eacute;diable
 Qui donne &agrave; penser que le Diable
 Fait toujours bien tout ce qu'il fait!
@@ -52,4 +52,4 @@ O&ugrave; tremble une &eacute;toile livide,
 Un phare ironique, infernal
 Flambeau des gr&acirc;ces sataniques,
 Soulagement et gloire uniques,
-&mdash; La conscience dans le Mal!
+-- La conscience dans le Mal!

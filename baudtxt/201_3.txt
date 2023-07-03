@@ -31,7 +31,7 @@ Fooling us with that exquisite grimace:
 On the reverse you see her proper face, 
 Fiercely convulsed, in its true self revealed, 
 Which from our sight that lying mask concealed.
-&mdash; O sad great beauty! The grand river, fed 
+-- O sad great beauty! The grand river, fed 
 By your rich tears, debouches in my heart. 
 Though I am rapt with your deceptive art,
 My soul is slaked upon the tears you shed.
@@ -44,5 +44,5 @@ She weeps because she's lived, and that she lives.
 Madly she weeps for that. But more she grieves 
 (And at the knees she trembles and goes weak) 
 Because tomorrow she must live, and then 
-The next day, and forever &mdash; like us men.
+The next day, and forever -- like us men.
 
