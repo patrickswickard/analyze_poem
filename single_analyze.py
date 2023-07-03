@@ -25,6 +25,6 @@ def read_poem(poem_file):
     thispoem = poemstruct.Poem(lines)
     return thispoem
 
-poem_file = 'baudtxt/160_5.txt'
+poem_file = 'baudtxt2/160_5.txt'
 this_poem = read_poem(poem_file)
 analyze_poem_to_json(this_poem,'outfile.json')
