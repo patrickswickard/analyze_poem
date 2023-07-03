@@ -206,7 +206,7 @@ class Poem:
         if (None in line_syllable_list):
           thisline.syllable_count = None
           print(thisline.text)
-          raise('Word with unknown syllable count found in list.')
+          #raise('Word with unknown syllable count found in list.')
         else:
           number_of_syllables = sum(line_syllable_list)
           thisline.syllable_count = number_of_syllables

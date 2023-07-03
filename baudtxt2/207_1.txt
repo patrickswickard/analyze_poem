@@ -1,13 +1,13 @@
 Semper eadem
 
-&laquo;D'o&ugrave; vous vient, disiez-vous, cette tristesse &eacute;trange,
+&laquo;D'o&ugrave; vous vient, disiez-vous, cette tristesse etrange,
 Montant comme la mer sur le roc noir et nu?&raquo;
 -- Quand notre coeur a fait une fois sa vendange
 Vivre est un mal. C'est un secret de tous connu,
 
-Une douleur tr&egrave;s simple et non myst&eacute;rieuse
-Et, comme votre joie, &eacute;clatante pour tous.
-Cessez donc de chercher, &ocirc; belle curieuse!
+Une douleur tres simple et non mysterieuse
+Et, comme votre joie, eclatante pour tous.
+Cessez donc de chercher, o belle curieuse!
 Et, bien que votre voix soit douce, taisez-vous!
 
 Taisez-vous, ignorante! &acirc;me toujours ravie!
@@ -16,4 +16,4 @@ La Mort nous tient souvent par des liens subtils.
 
 Laissez, laissez mon coeur s'enivrer d'un <i>mensonge,</i>
 Plonger dans vos beaux yeux comme dans un beau songe
-Et sommeiller longtemps &agrave; l'ombre de vos cils!
+Et sommeiller longtemps a l'ombre de vos cils!

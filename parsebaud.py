@@ -37,6 +37,24 @@ for i in range(98,232):
       if not re.match(r"^\s*(?:<p>|</p>)\s*$",thisline):
         thislinefixed = re.sub(r"(<b>|</b>|<br>)\s*","",thisline)
         thislinefixed = re.sub(r"&mdash;","--",thislinefixed)
+        thislinefixed = re.sub(r"&quot;",'"',thislinefixed)
+        #if not poem_count == 1:
+        if 1:
+          thislinefixed = re.sub(r"&eacute;","e",thislinefixed)
+          thislinefixed = re.sub(r"&egrave;","e",thislinefixed)
+          thislinefixed = re.sub(r"æ","ae",thislinefixed)
+          thislinefixed = re.sub(r"œ","oe",thislinefixed)
+          thislinefixed = re.sub(r"Æ","Ae",thislinefixed)
+          thislinefixed = re.sub(r"è","e",thislinefixed)
+          thislinefixed = re.sub(r"é","e",thislinefixed)
+          thislinefixed = re.sub(r"ü","u",thislinefixed)
+          thislinefixed = re.sub(r"&agrave;","a",thislinefixed)
+          thislinefixed = re.sub(r"&Eacute;","E",thislinefixed)
+          thislinefixed = re.sub(r"&Egrave;","E",thislinefixed)
+          thislinefixed = re.sub(r"&ecirc;","e",thislinefixed)
+          thislinefixed = re.sub(r"&ocirc;","o",thislinefixed)
+          thislinefixed = re.sub(r"&Agrave;","A",thislinefixed)
+          thislinefixed = re.sub(r"_","",thislinefixed)
         thispoem.append(thislinefixed)
     poem_count = 0
     for foundpoem in poemlist:

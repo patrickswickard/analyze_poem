@@ -35,4 +35,7 @@ for thisfile in list_of_files:
     pass
   else:
     this_poem = read_poem(poem_file)
-    analyze_poem_to_json(this_poem,'outfile.json')
+    try:
+      analyze_poem_to_json(this_poem,'outfile.json')
+    except:
+      print('problem with ' + poem_file)
