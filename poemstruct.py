@@ -132,6 +132,12 @@ class Poem:
         this_word_syllable = syllable_dict.get(thisword.lower())
         if not this_word_syllable:
           pass
+      # try dropping the ed if ends with ed
+      if re.findall(r"[^s]ed$",thisword.lower()):
+        thisword = re.sub(r"(ed$)","",thisword.lower())
+        this_word_syllable = syllable_dict.get(thisword.lower())
+        if not this_word_syllable:
+          pass
     if this_word_syllable:
       return this_word_syllable
     else:

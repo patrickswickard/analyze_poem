@@ -30,5 +30,9 @@ list_of_files = os.listdir('baudtxt2')
 for thisfile in list_of_files:
   #print(thisfile)
   poem_file = 'baudtxt2/' + thisfile
-  this_poem = read_poem(poem_file)
-  analyze_poem_to_json(this_poem,'outfile.json')
+  print(poem_file)
+  if re.findall(r"_1\.txt",poem_file):
+    pass
+  else:
+    this_poem = read_poem(poem_file)
+    analyze_poem_to_json(this_poem,'outfile.json')
