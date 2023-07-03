@@ -42,9 +42,9 @@ for i in range(98,232):
     for foundpoem in poemlist:
       poem_count += 1
       if i <= 99:
-        outfilename = 'baudtxt/0' + str(i) + "_" + str(poem_count) + '.txt'
+        outfilename = 'baudtxt2/0' + str(i) + "_" + str(poem_count) + '.txt'
       else:
-        outfilename = 'baudtxt/' + str(i) + "_" + str(poem_count) + '.txt'
+        outfilename = 'baudtxt2/' + str(i) + "_" + str(poem_count) + '.txt'
       f = open(outfilename,'w')
       for thisline in foundpoem:
         f.write(thisline + '\n')
