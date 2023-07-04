@@ -103,3 +103,4 @@ Command line tools added to analyze single poems and to take output from that an
 single_analyze.py -i <inputfile> -o <outputfile>
 
 report_sorted_word_frequencies.py -i <inputfile>
+(the latter expects output of the former as input, i.e. a parsed poem json file)
