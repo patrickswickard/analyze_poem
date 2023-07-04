@@ -2,6 +2,8 @@ import numpy
 import re
 import json
 import poemstruct
+import sys
+import getopt
 
 def analyze_poem(thispoem):
   print('*********************')
@@ -25,6 +27,23 @@ def read_poem(poem_file):
     thispoem = poemstruct.Poem(lines)
     return thispoem
 
-poem_file = 'baudtxt2/160_5.txt'
-this_poem = read_poem(poem_file)
-analyze_poem_to_json(this_poem,'outfile.json')
+def main(argv):
+  inputfile = ''
+  outputfile = ''
+  opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
+  for opt, arg in opts:
+    if opt == '-h':
+      print("single_analyze.py -i <inputfile> -o <outputfile>")
+      sys.exit()
+    elif opt in ('-i', '--ifile'):
+      inputfile = arg
+    elif opt in ('-o', '--ofile'):
+      outputfile = arg
+  if True:
+    this_poem = read_poem(inputfile)
+    analyze_poem_to_json(this_poem,outputfile)
+  else:
+    print("Usage: single_analyze.py -i <inputfile> -o <outputfile>")
+
+if __name__ == "__main__":
+  main(sys.argv[1:])
