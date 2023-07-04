@@ -95,3 +95,11 @@ As a stretch goal, many but not all words in dictionary potentially have a stres
 I have added some Baudelaire translations to this to demonstrate how much translations of the same poem can vary by translator to demonstrate some numbers that can be pulled quickly from this tool for style comparisons.
 
 TODO - add author field for poems, add translator field for poems, dedicatee cleanup for baudelaire, figure out way to display original version next to translation, better tools for dealing with missing dictionary words and/or turning off syllable count, particularly for non-English works
+
+USAGE:
+
+Command line tools added to analyze single poems and to take output from that and report word frequencies in a nice way
+
+single_analyze.py -i <inputfile> -o <outputfile>
+
+report_sorted_word_frequencies.py -i <inputfile>

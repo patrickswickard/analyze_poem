@@ -30,16 +30,14 @@ def read_poem(poem_file):
 def main(argv):
   inputfile = ''
   outputfile = ''
-  opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
+  opts, args = getopt.getopt(argv,"hi:",["ifile="])
   for opt, arg in opts:
     if opt == '-h':
-      print("single_analyze.py -i <inputfile> -o <outputfile>")
+      print("report_sorted_word_frequencies.py -i <inputfile>")
       sys.exit()
     elif opt in ('-i', '--ifile'):
       inputfile = arg
-    elif opt in ('-o', '--ofile'):
-      outputfile = arg
-  if inputfile and outputfile:
+  if inputfile:
     with open(inputfile) as fd:
       this_json = json.load(fd)
       poem_word_frequencies_hash = this_json['poem_word_frequencies_hash']
@@ -48,7 +46,7 @@ def main(argv):
       poem_word_frequencies_hash_sorted = sorted(poem_word_frequencies_hash.items(), key=lambda x:(-x[1],x),reverse=False)
       print(poem_word_frequencies_hash_sorted)
   else:
-    print("Usage: report_sorted_word_frequencies.py -i <inputfile> -o <outputfile>")
+    print("Usage: report_sorted_word_frequencies.py -i <inputfile>")
 
 if __name__ == "__main__":
   main(sys.argv[1:])
