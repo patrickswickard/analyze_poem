@@ -39,7 +39,7 @@ def main(argv):
       inputfile = arg
     elif opt in ('-o', '--ofile'):
       outputfile = arg
-  if True:
+  if inputfile and outputfile:
     this_poem = read_poem(inputfile)
     analyze_poem_to_json(this_poem,outputfile)
   else:
