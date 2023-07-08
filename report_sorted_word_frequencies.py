@@ -44,7 +44,8 @@ def main(argv):
       # sort by value (high to low, thus negative) then by alphabetical as tiebreaker
       # the negatives are so we don't do reverse
       poem_word_frequencies_hash_sorted = sorted(poem_word_frequencies_hash.items(), key=lambda x:(-x[1],x),reverse=False)
-      print(poem_word_frequencies_hash_sorted)
+      print(json.dumps(poem_word_frequencies_hash_sorted))
+      #print(poem_word_frequencies_hash_sorted)
   else:
     print("Usage: report_sorted_word_frequencies.py -i <inputfile>")
 
