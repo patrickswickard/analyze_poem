@@ -13,7 +13,7 @@ class Book:
 
 class Line:
   def __init__(self,linetext):
-    self.text = linetext
+    self.text = linetext.strip()
     self.syllable_list = []
     self.syllable_count = 0
     self.letters_only = ''
@@ -125,29 +125,41 @@ class Poem:
   def get_string_syllable_count(self,thisword):
     thisword_original = thisword
     this_word_syllable = syllable_dict.get(thisword.lower())
+    alt_word_syllable = syllable_dict.get(thisword.lower())
     if not this_word_syllable:
       # try dropping the s if ends with s
       if re.findall(r"[^s]s$",thisword.lower()):
-        thisword = re.sub(r"(s$)","",thisword.lower())
-        this_word_syllable = syllable_dict.get(thisword.lower())
-        if not this_word_syllable:
+        altword = re.sub(r"(s$)","",thisword.lower())
+        alt_word_syllable = syllable_dict.get(altword.lower())
+        if not alt_word_syllable:
+          pass
+      # try dropping the 's if ends with s
+      if re.findall(r"'s$",thisword.lower()):
+        altword = re.sub(r"('s$)","",thisword.lower())
+        alt_word_syllable = syllable_dict.get(altword.lower())
+        if not alt_word_syllable:
           pass
       # try dropping the ed if ends with ed
       if re.findall(r"[^s]ed$",thisword.lower()):
-        thisword = re.sub(r"(ed$)","",thisword.lower())
-        this_word_syllable = syllable_dict.get(thisword.lower())
-        if not this_word_syllable:
+        altword = re.sub(r"(ed$)","",thisword.lower())
+        alt_word_syllable = syllable_dict.get(altword.lower())
+        if not alt_word_syllable:
           pass
     if this_word_syllable:
       return this_word_syllable
+    elif alt_word_syllable:
+      return alt_word_syllable
     else:
       self.unknown_word_list.append(thisword_original)
       print("WARNING: " + thisword + "  does not have syllable")
       return None
 
   def get_word_list(self,string):
-    words_only = re.sub(r"[^\w\s]",' ',string).upper()
-    word_list = words_only.split()
+    # drop single quotes at beginning/end of line
+    string = re.sub(r"(^'|'$)",'',string)
+    # drop non-whitespace but retain apostrophes
+    words_only = re.sub(r"[^\w\s']",' ',string).strip().upper()
+    word_list = re.split(r"\s+",words_only)
     return word_list
 
   def get_line_letter_frequencies(self,thisline):
