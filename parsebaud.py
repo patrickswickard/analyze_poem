@@ -1,7 +1,4 @@
-import numpy
 import re
-import json
-import poemstruct
 
 for i in range(98,232):
   if i <=99:
