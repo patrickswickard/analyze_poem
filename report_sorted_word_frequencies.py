@@ -1,11 +1,11 @@
-import numpy
-import re
+"""Script to report word frequencies of a poem that has been parsed to a json file"""
 import json
-import poemstruct
 import sys
 import getopt
+import poemstruct
 
 def analyze_poem(thispoem):
+  """Analyze poem stanza syllable line info and word and letter frequencies"""
   print('*********************')
   print('I read a poem today!')
   print(thispoem.title)
@@ -17,19 +17,23 @@ def analyze_poem(thispoem):
   thispoem.print_poem_letter_frequencies()
 
 def analyze_poem_to_json(thispoem,filename):
-  f = open(filename,'w')
-  f.write(thispoem.dump_poem_hash())
-  f.close()
+  """Dump the poem hash to external file"""
+#  f = open(filename,'w')
+#  f.write(thispoem.dump_poem_hash())
+#  f.close()
+  with open(filename,'w',encoding='utf-8') as outfile:
+    outfile.write(thispoem.dump_poem_hash())
 
 def read_poem(poem_file):
-  with open(poem_file) as fd:
-    lines = fd.read().splitlines()
-    thispoem = poemstruct.Poem(lines)
-    return thispoem
+  """Read in a poem from a file"""
+  with open(poem_file,'r',encoding='utf-8') as myfile:
+    lines = myfile.read().splitlines()
+  thispoem = poemstruct.Poem(lines)
+  return thispoem
 
 def main(argv):
+  """Main script"""
   inputfile = ''
-  outputfile = ''
   opts, args = getopt.getopt(argv,"hi:",["ifile="])
   for opt, arg in opts:
     if opt == '-h':
@@ -38,8 +42,8 @@ def main(argv):
     elif opt in ('-i', '--ifile'):
       inputfile = arg
   if inputfile:
-    with open(inputfile) as fd:
-      this_json = json.load(fd)
+    with open(inputfile,'r',encoding='utf-8') as myfile:
+      this_json = json.load(myfile)
       poem_word_frequencies_hash = this_json['poem_word_frequencies_hash']
       # sort by value (high to low, thus negative) then by alphabetical as tiebreaker
       # the negatives are so we don't do reverse
