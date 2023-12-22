@@ -1,6 +1,6 @@
-import numpy
 import re
 import json
+import numpy
 
 with open('dict.json') as fd:
   syllable_dict = json.loads(fd.read())
