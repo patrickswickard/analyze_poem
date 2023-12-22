@@ -1,11 +1,10 @@
-import numpy
-import re
-import json
-import poemstruct
-import sys
+"""Poem analysis tools"""
 import getopt
+import sys
+import poemstruct
 
 def analyze_poem(thispoem):
+  """Analyze stanza syllable line info and word and letter frequencies"""
   print('*********************')
   print('I read a poem today!')
   print(thispoem.title)
@@ -17,17 +16,22 @@ def analyze_poem(thispoem):
   thispoem.print_poem_letter_frequencies()
 
 def analyze_poem_to_json(thispoem,filename):
-  f = open(filename,'w')
-  f.write(thispoem.dump_poem_hash())
-  f.close()
+  """Analyze poem and spit out to a given json file"""
+#  f = open(filename,'w')
+#  f.write(thispoem.dump_poem_hash())
+#  f.close()
+  with open(filename,'w',encoding="utf-8") as thisoutfile:
+    thisoutfile.write(thispoem.dump_poem_hash())
 
 def read_poem(poem_file):
-  with open(poem_file) as fd:
-    lines = fd.read().splitlines()
+  """Read in a poem and spit out as individual lines"""
+  with open(poem_file,'r',encoding="utf-8") as my_poem:
+    lines = my_poem.read().splitlines()
     thispoem = poemstruct.Poem(lines)
     return thispoem
 
 def main(argv):
+  """Main script method for analyzing poems"""
   inputfile = ''
   outputfile = ''
   opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
