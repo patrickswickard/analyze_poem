@@ -1,8 +1,6 @@
-import numpy
 import re
-import json
-import poemstruct
 import os
+import poemstruct
 
 def analyze_poem(thispoem):
   print('*********************')
