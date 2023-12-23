@@ -1,16 +1,16 @@
-import numpy
-import re
-import json
-import poemstruct
+"""Code to read in raw baud html"""
+def readbaud():
+  """Read baud txt files which probably no longer exist"""
+  for i in range(98,232):
+    if i <=99:
+      filename = 'baudtxt/0' + str(i) + '.txt'
+    else:
+      filename = 'baudtxt/' + str(i) + '.txt'
+    with open(filename,'r',encoding='utf-8') as myinfile:
+      rawlines = myinfile.read().splitlines()
 
-for i in range(98,232):
-  if i <=99:
-    filename = 'baudhtml/0' + str(i) + '.txt'
-  else:
-    filename = 'baudhtml/' + str(i) + '.txt'
-  with open(filename) as fd:
-    rawlines = fd.read().splitlines()
-
-with open(filename) as fd:
-    rawlines = fd.read().splitlines()
+  with open(filename,'r',encoding='utf=8') as myinfile:
+    rawlines = myinfile.read().splitlines()
     print(rawlines)
+
+readbaud()
