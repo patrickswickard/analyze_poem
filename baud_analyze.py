@@ -1,9 +1,8 @@
-import numpy
-import re
-import json
+"""Script to demonstrate analyzing Baudelaire poem, in particular The Albatross"""
 import poemstruct
 
 def analyze_poem(thispoem):
+  """Analyze an individual poem"""
   print('*********************')
   print('I read a poem today!')
   print(thispoem.title)
@@ -15,19 +14,21 @@ def analyze_poem(thispoem):
   thispoem.print_poem_letter_frequencies()
 
 def analyze_poem_to_json(thispoem,filename):
-  f = open(filename,'w')
-  f.write(thispoem.dump_poem_hash())
-  f.close()
+  """Spit out a poem analysis to json"""
+  with open(filename,'w',encoding='utf=8') as myoutfile:
+    myoutfile.write(thispoem.dump_poem_hash())
 
 def read_poem(poem_file):
-  with open(poem_file) as fd:
-    lines = fd.read().splitlines()
-    thispoem = poemstruct.Poem(lines)
-    return thispoem
+  """Read in individual poem"""
+  with open(poem_file,'r',encoding='utf=8') as myinfile:
+    lines = myinfile.read().splitlines()
+  thispoem = poemstruct.Poem(lines)
+  return thispoem
 
 def analyze_corpus_to_json():
+  """Analyze a poet's corpus and spit out to json files"""
   corpus_word_frequency_plath = {}
-  corpus_word_frequency_sylph = {}
+  #corpus_word_frequency_sylph = {}
 
   values = range(40)
   for i in values:
@@ -51,8 +52,8 @@ def analyze_corpus_to_json():
       filename = 'plath/poem_' + str(i) + '.json'
     analyze_poem_to_json(this_poem,filename)
 
-
 def analyze_corpus():
+  """Analyze an entire corpus of work by a poet"""
   corpus_word_frequency_plath = {}
   corpus_word_frequency_sylph = {}
 
@@ -89,29 +90,31 @@ def analyze_corpus():
   print(sorted_corpus_word_frequency_sylph)
   print('*********************')
 
-#analyze_corpus()
-#analyze_corpus_to_json()
-print('1')
-poem_file = 'baudelaire/albatross_01.txt'
-this_poem = read_poem(poem_file)
-analyze_poem_to_json(this_poem,'baudelaire/albatross_01.json')
-print('2')
-poem_file = 'baudelaire/albatross_02.txt'
-this_poem = read_poem(poem_file)
-analyze_poem_to_json(this_poem,'baudelaire/albatross_02.json')
-print('3')
-poem_file = 'baudelaire/albatross_03.txt'
-this_poem = read_poem(poem_file)
-analyze_poem_to_json(this_poem,'baudelaire/albatross_03.json')
-print('4')
-poem_file = 'baudelaire/albatross_04.txt'
-this_poem = read_poem(poem_file)
-analyze_poem_to_json(this_poem,'baudelaire/albatross_04.json')
-print('5')
-poem_file = 'baudelaire/albatross_05.txt'
-this_poem = read_poem(poem_file)
-analyze_poem_to_json(this_poem,'baudelaire/albatross_05.json')
-print('6')
-poem_file = 'baudelaire/albatross_06.txt'
-this_poem = read_poem(poem_file)
-analyze_poem_to_json(this_poem,'baudelaire/albatross_06.json')
+def do_baud_analysis():
+  """Perform analysis of Albatross poems"""
+  print('1')
+  poem_file = 'baudelaire/albatross_01.txt'
+  this_poem = read_poem(poem_file)
+  analyze_poem_to_json(this_poem,'baudelaire/albatross_01.json')
+  print('2')
+  poem_file = 'baudelaire/albatross_02.txt'
+  this_poem = read_poem(poem_file)
+  analyze_poem_to_json(this_poem,'baudelaire/albatross_02.json')
+  print('3')
+  poem_file = 'baudelaire/albatross_03.txt'
+  this_poem = read_poem(poem_file)
+  analyze_poem_to_json(this_poem,'baudelaire/albatross_03.json')
+  print('4')
+  poem_file = 'baudelaire/albatross_04.txt'
+  this_poem = read_poem(poem_file)
+  analyze_poem_to_json(this_poem,'baudelaire/albatross_04.json')
+  print('5')
+  poem_file = 'baudelaire/albatross_05.txt'
+  this_poem = read_poem(poem_file)
+  analyze_poem_to_json(this_poem,'baudelaire/albatross_05.json')
+  print('6')
+  poem_file = 'baudelaire/albatross_06.txt'
+  this_poem = read_poem(poem_file)
+  analyze_poem_to_json(this_poem,'baudelaire/albatross_06.json')
+
+do_baud_analysis()
