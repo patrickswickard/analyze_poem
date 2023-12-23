@@ -1,9 +1,8 @@
-import numpy
-import re
-import json
+"""Code to analyze poem corpuses"""
 import poemstruct
 
 def analyze_poem(thispoem):
+  """Analyze a single poem"""
   print('*********************')
   print('I read a poem today!')
   print(thispoem.title)
@@ -15,19 +14,21 @@ def analyze_poem(thispoem):
   thispoem.print_poem_letter_frequencies()
 
 def analyze_poem_to_json(thispoem,filename):
-  f = open(filename,'w')
-  f.write(thispoem.dump_poem_hash())
-  f.close()
+  """Spit out poem analysis to json"""
+  with open(filename,'w',encoding='utf-8') as myoutfile:
+    myoutfile.write(thispoem.dump_poem_hash())
 
 def read_poem(poem_file):
-  with open(poem_file) as fd:
-    lines = fd.read().splitlines()
+  """Read in an individual poem"""
+  with open(poem_file,'r',encoding='utf-8') as myinfile:
+    lines = myinfile.read().splitlines()
     thispoem = poemstruct.Poem(lines)
     return thispoem
 
 def analyze_corpus_to_json():
+  """Analyze a poet's corpus and spit out to json"""
   corpus_word_frequency_plath = {}
-  corpus_word_frequency_sylph = {}
+  #corpus_word_frequency_sylph = {}
 
   values = range(40)
   for i in values:
@@ -53,6 +54,7 @@ def analyze_corpus_to_json():
 
 
 def analyze_corpus():
+  """Analyze a poet's corpus in particular Plath/Sylph"""
   corpus_word_frequency_plath = {}
   corpus_word_frequency_sylph = {}
 
